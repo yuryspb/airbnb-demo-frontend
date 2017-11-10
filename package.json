@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^4.3.0",
-    "normalize": "^0.3.1",
     "normalize.css": "^7.0.0",
     "prettier": "^1.8.1",
     "react": "^16.0.0",
@@ -14,10 +11,7 @@
     "styled-components": "^2.2.3"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "src/**/*.{js,jsx,json,css}": ["prettier --single-quote --write", "git add"]
   },
   "scripts": {
     "precommit": "lint-staged",

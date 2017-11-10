@@ -23,6 +23,9 @@ export const Select = styled.select`
   color: #383838;
   font: 18px 'Circular Air Light', sans-serif;
   appearance: none;
+  ::-ms-expand {
+    display: none;
+  }
   background: url(${arrow}) no-repeat 95% 50%;
 `;
 
