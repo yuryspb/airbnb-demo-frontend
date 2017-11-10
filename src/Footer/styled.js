@@ -22,11 +22,11 @@ export const Select = styled.select`
   border-radius: 4px;
   color: #383838;
   font: 18px 'Circular Air Light', sans-serif;
+  background: url(${arrow}) no-repeat 95% 50%;
   appearance: none;
   ::-ms-expand {
     display: none;
   }
-  background: url(${arrow}) no-repeat 95% 50%;
 `;
 
 export const NavContainer = styled.div`
