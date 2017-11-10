@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import arrow from './arrow.svg';
 
-export const Experiences = styled.div`
+export const Homes = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 20px;
 `;
 
 export const Wrapper = styled.section`
@@ -28,7 +28,7 @@ export const LinkSeeAll = styled.a`
 `;
 
 export const Link = styled.a`
-  width: 229px;
+  width: 310px;
   text-align: left;
   text-decoration: none;
   color: #383838;
@@ -37,7 +37,7 @@ export const Link = styled.a`
 `;
 
 export const Img = styled.img`
-  width: 229px;
+  width: 310px;
 `;
 
 export const Stars = styled.img`
@@ -53,16 +53,19 @@ export const Info = styled.p`
 
 export const Price = styled.span`
   font-weight: 900;
+  font-size: 15px;
   margin-right: 5px;
 `;
 
-export const Name = styled.span`
-  font-family: 'Circular Air Light', sans-serif;
+export const Name = styled.p`
+  margin-top: 5px;
+  margin-bottom: 0;
+  font: 15px 'Circular Air Light', sans-serif;
 `;
 
 export const BtnNext = styled.a`
   position: absolute;
-  top: 250px;
+  top: 180px;
   left: 945px;
   width: 40px;
   height: 40px;

@@ -3,6 +3,10 @@ import './App.css';
 import Header from './Header/';
 import Explore from './Explore/';
 import Experiences from './Experiences/';
+import Homes from './Homes/';
+import Popular from './Popular/';
+import Destinations from './Destinations/';
+import Footer from './Footer/';
 
 class App extends Component {
   render() {
@@ -13,8 +17,12 @@ class App extends Component {
           <main className="main">
             <Explore />
             <Experiences />
+            <Homes />
+            <Popular />
+            <Destinations />
           </main>
         </div>
+        <Footer />
       </div>
     );
   }
