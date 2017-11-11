@@ -32,35 +32,39 @@ export default function() {
       <div className="row">
         <div className="col-12">
           <Wrapper>
-            <Link href="#">
-              <Img src={pic1} />
-              <Info>
-                <Price>$82 La Salentina, see, nature & relax</Price>
-                <Name>Entire house &#183; 9 beds</Name>
-              </Info>
-              <Stars src={stars} />
-              97 &#183; Superhost
-            </Link>
-
-            <Link href="#">
-              <Img src={pic2} />
-              <Info>
-                <Price>$82 Your private 3 bedr. riad and exclusi...</Price>
-                <Name>Entire house &#183; 5 beds</Name>
-              </Info>
-              <Stars src={stars} />
-              161 &#183; Superhost
-            </Link>
-
-            <Link href="#">
-              <Img src={pic3} />
-              <Info>
-                <Price>$200 Dreamy Tropical Tree House</Price>
-                <Name>Entire house &#183; 1 bed</Name>
-              </Info>
-              <Stars src={stars} />
-              364 &#183; Superhost
-            </Link>
+            <div className="col-xs-8 col-sm-5 col-md-4">
+              <Link href="#">
+                <Img src={pic1} />
+                <Info>
+                  <Price>$82 La Salentina, see, nature & relax</Price>
+                  <Name>Entire house &#183; 9 beds</Name>
+                </Info>
+                <Stars src={stars} />
+                97 &#183; Superhost
+              </Link>
+            </div>
+            <div className="col-xs-8 col-sm-5 col-md-4">
+              <Link href="#">
+                <Img src={pic2} />
+                <Info>
+                  <Price>$82 Your private 3 bedr. riad and exclusi...</Price>
+                  <Name>Entire house &#183; 5 beds</Name>
+                </Info>
+                <Stars src={stars} />
+                161 &#183; Superhost
+              </Link>
+            </div>
+            <div className="col-xs-8 col-sm-5 col-md-4">
+              <Link href="#">
+                <Img src={pic3} />
+                <Info>
+                  <Price>$200 Dreamy Tropical Tree House</Price>
+                  <Name>Entire house &#183; 1 bed</Name>
+                </Info>
+                <Stars src={stars} />
+                364 &#183; Superhost
+              </Link>
+            </div>
           </Wrapper>
         </div>
       </div>

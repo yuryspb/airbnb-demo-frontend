@@ -34,9 +34,13 @@ export const Input = styled.input`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  justify-content: space-around;
-  width: 300px;
+  display: none;
+
+  @media (min-width: 991px) {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+  }
 `;
 
 export const Link = styled.a`

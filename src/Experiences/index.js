@@ -33,42 +33,50 @@ export default function() {
       <div className="row">
         <div className="col-12">
           <Wrapper>
-            <Link href="#">
-              <Img src={pic1} />
-              <Info>
-                <Price>$29</Price>
-                <Name>Forest therapy</Name>
-              </Info>
-              <Stars src={stars} />
-              44 reviews
-            </Link>
-            <Link href="#">
-              <Img src={pic2} />
-              <Info>
-                <Price>$69</Price>
-                <Name>Whale watching</Name>
-              </Info>
-              <Stars src={stars} />
-              46 reviews
-            </Link>
-            <Link href="#">
-              <Img src={pic3} />
-              <Info>
-                <Price>$69</Price>
-                <Name>Table Mountain Summit, Cable Car Down</Name>
-              </Info>
-              <Stars src={stars} />
-              44 reviews
-            </Link>
-            <Link href="#">
-              <Img src={pic4} />
-              <Info>
-                <Price>$50</Price>
-                <Name>Salsa night</Name>
-              </Info>
-              <Stars src={stars} />
-              44 reviews
-            </Link>
+            <div className="col-xs-6 col-sm-4 col-md-3">
+              <Link href="#">
+                <Img src={pic1} />
+                <Info>
+                  <Price>$29</Price>
+                  <Name>Forest therapy</Name>
+                </Info>
+                <Stars src={stars} />
+                44 reviews
+              </Link>
+            </div>
+            <div className="col-xs-6 col-sm-4 col-md-3">
+              <Link href="#">
+                <Img src={pic2} />
+                <Info>
+                  <Price>$69</Price>
+                  <Name>Whale watching</Name>
+                </Info>
+                <Stars src={stars} />
+                46 reviews
+              </Link>
+            </div>
+            <div className="col-xs-6 col-sm-4 col-md-3">
+              <Link href="#">
+                <Img src={pic3} />
+                <Info>
+                  <Price>$69</Price>
+                  <Name>Table Mountain Summit, Cable Car Down</Name>
+                </Info>
+                <Stars src={stars} />
+                44 reviews
+              </Link>
+            </div>
+            <div className="col-xs-6 col-sm-4 col-md-3">
+              <Link href="#">
+                <Img src={pic4} />
+                <Info>
+                  <Price>$50</Price>
+                  <Name>Salsa night</Name>
+                </Info>
+                <Stars src={stars} />
+                44 reviews
+              </Link>
+            </div>
           </Wrapper>
         </div>
       </div>
