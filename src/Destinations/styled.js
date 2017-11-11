@@ -25,30 +25,11 @@ export const Title = styled.h2`
 `;
 
 export const Link = styled.a`
-  width: 91px;
   text-decoration: none;
   color: #383838;
-
-  @media (min-width: 576px) {
-    width: 176px;
-  }
-
-  @media (min-width: 991px) {
-    width: 147px;
-  }
 `;
 
-export const Img = styled.img`
-  width: 91px;
-
-  @media (min-width: 576px) {
-    width: 176px;
-  }
-
-  @media (min-width: 991px) {
-    width: 147px;
-  }
-`;
+export const Img = styled.img``;
 
 export const Name = styled.p`
   font: 12px "Circular", sans-serif;
@@ -67,7 +48,7 @@ export const BtnNext = styled.a`
     display: block;
     position: absolute;
     top: 200px;
-    left: 945px;
+    right: -20px;
     width: 40px;
     height: 40px;
   }

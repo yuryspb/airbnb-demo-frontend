@@ -36,25 +36,14 @@ export const LinkSeeAll = styled.a`
 `;
 
 export const Link = styled.a`
-  width: 197px;
   text-align: left;
   text-decoration: none;
   color: #383838;
   font-size: 12px;
   font-family: "Circular Air Book", sans-serif;
-
-  @media (min-width: 576px) {
-    width: 310px;
-  }
 `;
 
-export const Img = styled.img`
-  width: 197px;
-
-  @media (min-width: 576px) {
-    width: 310px;
-  }
-`;
+export const Img = styled.img``;
 
 export const Stars = styled.img`
   width: 76px;
@@ -94,7 +83,7 @@ export const BtnNext = styled.a`
     display: block;
     position: absolute;
     top: 180px;
-    left: 945px;
+    right: -20px;
     width: 40px;
     height: 40px;
   }

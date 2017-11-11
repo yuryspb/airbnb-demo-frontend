@@ -30,8 +30,6 @@ export const Link = styled.a`
   flex-direction: column;
   align-items: left;
   box-sizing: border-box;
-  width: 144px;
-  height: 118px;
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0 2px 0 0 rgba(72, 72, 72, 0.08);
   border-radius: 4px;
