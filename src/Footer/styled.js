@@ -2,8 +2,12 @@ import styled from "styled-components";
 import arrow from "./arrowDown.svg";
 
 export const Footer = styled.footer`
-  margin-top: 65px;
+  margin-top: 40px;
   border-top: 1px solid rgba(72, 72, 72, 0.3);
+
+  @media (min-width: 576px) {
+    margin-top: 65px;
+  }
 `;
 
 export const FirstRow = styled.div`

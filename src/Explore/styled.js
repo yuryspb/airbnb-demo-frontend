@@ -1,9 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Explore = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 48px;
+  margin-top: 39px;
+
+  @media (min-width: 576px) {
+    margin-top: 48px;
+  }
 `;
 
 export const Title = styled.h1`

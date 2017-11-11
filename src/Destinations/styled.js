@@ -1,9 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Destinations = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 16px;
+
+  @media (min-width: 576px) {
+    padding-top: 25px;
+  }
 `;
 
 export const Wrapper = styled.section`
@@ -47,7 +51,7 @@ export const Img = styled.img`
 `;
 
 export const Name = styled.p`
-  font: 12px 'Circular', sans-serif;
+  font: 12px "Circular", sans-serif;
   margin-top: 5px;
   font-weight: bold;
 
