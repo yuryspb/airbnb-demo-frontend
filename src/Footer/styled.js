@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import arrow from './arrowDown.svg';
+import styled from "styled-components";
+import arrow from "./arrowDown.svg";
 
 export const Footer = styled.footer`
   margin-top: 65px;
@@ -37,7 +37,7 @@ export const Select = styled.select`
   padding-left: 10px;
   border-radius: 4px;
   color: #383838;
-  font: 12px 'Circular Air Light', sans-serif;
+  font: 12px "Circular Air Light", sans-serif;
   background: url(${arrow}) no-repeat 95% 50%;
   appearance: none;
   ::-ms-expand {
@@ -47,11 +47,12 @@ export const Select = styled.select`
   @media (min-width: 576px) {
     height: 48px;
     width: 176px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   @media (min-width: 911px) {
     width: 229px;
+    font-size: 18px;
   }
 `;
 
@@ -72,15 +73,23 @@ export const Nav = styled.nav`
 
 export const NavTitle = styled.span`
   margin-bottom: 12px;
-  font: 15px 'Circular Air Bold', sans-serif;
+  font: 12px "Circular Air Bold", sans-serif;
   font-weight: bold;
+
+  @media (min-width: 911px) {
+    font-size: 15px;
+  }
 `;
 
 export const Link = styled.a`
   margin-bottom: 8px;
   text-decoration: none;
   color: #383838;
-  font: 15px 'Circular Air Book', sans-serif;
+  font: 12px "Circular Air Book", sans-serif;
+
+  @media (min-width: 911px) {
+    font-size: 15px;
+  }
 `;
 
 export const LastRow = styled.div`
@@ -114,7 +123,7 @@ export const Info = styled.div`
 export const Copyright = styled.p`
   display: flex;
   align-items: center;
-  font: 15px 'Circular Air Book', sans-serif;
+  font: 15px "Circular Air Book", sans-serif;
 `;
 
 export const Logo = styled.img`
@@ -124,7 +133,7 @@ export const Logo = styled.img`
 export const SocialLink = styled.a`
   text-decoration: none;
   color: #636363;
-  font: 15px 'Circular Air Book', sans-serif;
+  font: 15px "Circular Air Book", sans-serif;
 `;
 
 export const DotInfo = styled.span`
