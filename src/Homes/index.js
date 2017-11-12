@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Homes,
   Wrapper,
@@ -11,12 +11,12 @@ import {
   Price,
   Stars,
   BtnNext
-} from './styled';
-import stars from './stars.svg';
-import btn from './btn.svg';
-import pic1 from './pic21.png';
-import pic2 from './pic22.png';
-import pic3 from './pic23.png';
+} from "./styled";
+import stars from "./stars.svg";
+import btn from "./btn.svg";
+import pic1 from "./pic21.png";
+import pic2 from "./pic22.png";
+import pic3 from "./pic23.png";
 
 export default function() {
   return (

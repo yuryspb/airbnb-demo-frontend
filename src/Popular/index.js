@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Popular,
   Wrapper,
@@ -11,12 +11,12 @@ import {
   Name,
   Price,
   BtnNext
-} from './styled';
-import btn from './btn.svg';
-import pic1 from './pic31.png';
-import pic2 from './pic32.png';
-import pic3 from './pic33.png';
-import pic4 from './pic34.png';
+} from "./styled";
+import btn from "./btn.svg";
+import pic1 from "./pic31.png";
+import pic2 from "./pic32.png";
+import pic3 from "./pic33.png";
+import pic4 from "./pic34.png";
 
 export default function() {
   return (

@@ -77,7 +77,7 @@ export const BtnNext = styled.a`
     display: block;
     position: absolute;
     top: 250px;
-    right: -20px;
+    right: -35px;
     width: 40px;
     height: 40px;
   }

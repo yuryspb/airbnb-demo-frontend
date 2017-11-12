@@ -1,8 +1,8 @@
-import React from 'react';
-import { Explore, Title, Wrapper, Link, Img, Feauters } from './styled';
-import pic1 from './pic01.png';
-import pic2 from './pic02.png';
-import pic3 from './pic03.png';
+import React from "react";
+import { Explore, Title, Wrapper, Link, Img, Feauters } from "./styled";
+import pic1 from "./pic01.png";
+import pic2 from "./pic02.png";
+import pic3 from "./pic03.png";
 
 export default function() {
   return (
