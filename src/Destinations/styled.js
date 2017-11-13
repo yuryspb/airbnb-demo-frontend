@@ -1,9 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Destinations = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 16px;
+
+  @media (min-width: 576px) {
+    padding-top: 25px;
+  }
 `;
 
 export const Wrapper = styled.section`
@@ -12,30 +16,40 @@ export const Wrapper = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 20px;
+
+  @media (min-width: 576px) {
+    font-size: 32px;
+  }
 `;
 
 export const Link = styled.a`
-  width: 147px;
   text-decoration: none;
   color: #383838;
 `;
 
-export const Img = styled.img`
-  width: 147px;
-`;
+export const Img = styled.img``;
 
 export const Name = styled.p`
+  font: 12px "Circular", sans-serif;
   margin-top: 5px;
-  font: 15px 'Circular', sans-serif;
   font-weight: bold;
+
+  @media (min-width: 576px) {
+    font-size: 15px;
+  }
 `;
 
 export const BtnNext = styled.a`
-  position: absolute;
-  top: 200px;
-  left: 945px;
-  width: 40px;
-  height: 40px;
+  display: none;
+
+  @media (min-width: 991px) {
+    display: block;
+    position: absolute;
+    top: 200px;
+    right: -35px;
+    width: 40px;
+    height: 40px;
+  }
 `;

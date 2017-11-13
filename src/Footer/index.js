@@ -12,7 +12,8 @@ import {
   Logo,
   Info,
   SocialLink,
-  DotInfo
+  DotInfo,
+  SelectorsField
 } from './styled';
 import logo from './airbnbLogo.svg';
 import iconFacebook from './facebook.svg';
@@ -24,13 +25,15 @@ export default function() {
       <div className="container">
         <div className="row">
           <FirstRow>
-            <div className="col-3">
-              <Select name="language" id="languageSelect">
-                <option value="first">English</option>
-              </Select>
-              <Select name="currency" id="currencySelect">
-                <option value="first">United States dollar</option>
-              </Select>
+            <div className="col-xs-12 col-sm-3 col-md-3">
+              <SelectorsField>
+                <Select name="language" id="languageSelect">
+                  <option value="first">English</option>
+                </Select>
+                <Select name="currency" id="currencySelect">
+                  <option value="first">United States dollar</option>
+                </Select>
+              </SelectorsField>
             </div>
 
             <div className="col-8">
@@ -68,12 +71,12 @@ export default function() {
         <div className="row">
           <div className="col-12">
             <LastRow>
-              <div className="col-2">
+              <div className="col-xs-4 col-sm-2 col-md-2">
                 <Copyright>
                   <Logo src={logo} /> © Airbnb Inc.
                 </Copyright>
               </div>
-              <div className="col-4">
+              <div className="col-xs-9 col-sm-5 col-md-4">
                 <Info>
                   <SocialLink href="#" className="SocialLinks">
                     Terms

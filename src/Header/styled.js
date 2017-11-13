@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import search from './search.svg';
+import styled from "styled-components";
+import search from "./search.svg";
 
 export const Header = styled.header`
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
@@ -34,9 +34,13 @@ export const Input = styled.input`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  justify-content: space-around;
-  width: 300px;
+  display: none;
+
+  @media (min-width: 991px) {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+  }
 `;
 
 export const Link = styled.a`

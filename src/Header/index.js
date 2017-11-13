@@ -1,6 +1,6 @@
-import React from 'react';
-import { Header, Row, LogoSearch, Input, Nav, Link } from './styled';
-import logo from './airbnbLogo.svg';
+import React from "react";
+import { Header, Row, LogoSearch, Input, Nav, Link } from "./styled";
+import logo from "./airbnbLogo.svg";
 
 export default function() {
   return (
@@ -8,14 +8,15 @@ export default function() {
       <div className="container">
         <div className="row">
           <Row>
-            <div className="col-6">
+            <div className="col-xs-8 col-12">
               <LogoSearch>
                 <img src={logo} alt="logo" />
+
                 <Input type="text" placeholder="Try &quot;Miami&quot;" />
               </LogoSearch>
             </div>
 
-            <div className="col-4">
+            <div className="col-xs-4">
               <Nav>
                 <Link href="#">Become a host</Link>
                 <Link href="#">Help</Link>

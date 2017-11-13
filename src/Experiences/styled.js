@@ -1,10 +1,14 @@
-import styled from 'styled-components';
-import arrow from './arrow.svg';
+import styled from "styled-components";
+import arrow from "./arrow.svg";
 
 export const Experiences = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 16px;
+
+  @media (min-width: 576px) {
+    padding-top: 25px;
+  }
 `;
 
 export const Wrapper = styled.section`
@@ -13,8 +17,12 @@ export const Wrapper = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 20px;
+
+  @media (min-width: 576px) {
+    font-size: 32px;
+  }
 `;
 
 export const LinkSeeAll = styled.a`
@@ -22,23 +30,20 @@ export const LinkSeeAll = styled.a`
   width: 55px;
   margin-bottom: -15px;
   background: url(${arrow}) no-repeat 100% 50%;
-  font: 14px 'Circular Air Book', sans-serif;
+  font: 14px "Circular Air Book", sans-serif;
   color: #383838;
   text-decoration: none;
 `;
 
 export const Link = styled.a`
-  width: 229px;
   text-align: left;
   text-decoration: none;
   color: #383838;
   font-size: 12px;
-  font-family: 'Circular Air Book', sans-serif;
+  font-family: "Circular Air Book", sans-serif;
 `;
 
-export const Img = styled.img`
-  width: 229px;
-`;
+export const Img = styled.img``;
 
 export const Stars = styled.img`
   width: 76px;
@@ -57,13 +62,23 @@ export const Price = styled.span`
 `;
 
 export const Name = styled.span`
-  font-family: 'Circular Air Light', sans-serif;
+  font-family: "Circular Air Light", sans-serif;
+  font-size: 13px;
+
+  @media (min-width: 576px) {
+    font-size: 15px;
+  }
 `;
 
 export const BtnNext = styled.a`
-  position: absolute;
-  top: 250px;
-  left: 945px;
-  width: 40px;
-  height: 40px;
+  display: none;
+
+  @media (min-width: 991px) {
+    display: block;
+    position: absolute;
+    top: 250px;
+    right: -35px;
+    width: 40px;
+    height: 40px;
+  }
 `;
