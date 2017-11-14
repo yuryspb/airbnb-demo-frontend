@@ -14,7 +14,7 @@ export default function() {
         <div className="col-12">
           <Wrapper>
             <div className="col-xs-6 col-sm-5 col-md-4">
-              <Link href="#">
+              <Link href="Homes/">
                 <Img src={pic1} />
                 <Feauters>Homes</Feauters>
               </Link>

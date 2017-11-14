@@ -1,29 +1,18 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './Header/';
-import Explore from './Explore/';
-import Experiences from './Experiences/';
-import Homes from './Homes/';
-import Popular from './Popular/';
-import Destinations from './Destinations/';
-import Footer from './Footer/';
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import Landing from "./Landing";
+import Homes from "./Homes";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <div className="container">
-          <main className="main">
-            <Explore />
-            <Experiences />
-            <Homes />
-            <Popular />
-            <Destinations />
-          </main>
+      <BrowserRouter>
+        <div>
+          <Route path="/" exact component={Landing} />
+          <Route path="/homes" component={Homes} />
         </div>
-        <Footer />
-      </div>
+      </BrowserRouter>
     );
   }
 }
