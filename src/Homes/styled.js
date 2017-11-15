@@ -6,6 +6,13 @@ export const Wrapper = styled.section`
   flex-wrap: wrap;
 `;
 
+export const WrapperMap = styled.div`
+  display: flex;
+  width: 16.66%;
+  height: 100%;
+  position: fixed;
+`;
+
 export const Filters = styled.header`
   box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
   min-height: 56px;

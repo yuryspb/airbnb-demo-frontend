@@ -5,7 +5,7 @@ import Card from "./Card";
 import Paginator from "./Paginator";
 import Map from "./Map";
 
-import { Filters, Filter, Wrapper, Footer } from "./styled";
+import { Filters, Filter, Wrapper, Footer, WrapperMap } from "./styled";
 
 import img1 from "./home1.png";
 import img2 from "./home2.png";
@@ -111,7 +111,9 @@ export default function() {
             </Footer>
           </div>
           <div className="col-lg-4">
-            <Map center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
+            <WrapperMap>
+              <Map center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
+            </WrapperMap>
           </div>
         </div>
       </div>
