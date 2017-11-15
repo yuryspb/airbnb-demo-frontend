@@ -2,17 +2,21 @@ import React from "react";
 import { Header, Row, LogoSearch, Input, Nav, Link } from "./styled";
 import logo from "./airbnbLogo.svg";
 
-export default function() {
+export default function(props) {
   return (
     <Header>
       <div className="container">
         <div className="row">
           <Row>
-            <div className="col-xs-8 col-12">
+            <div className="col-xs-10 col-lg-5">
               <LogoSearch>
                 <img src={logo} alt="logo" />
 
-                <Input type="text" placeholder="Try &quot;Miami&quot;" />
+                <Input
+                  type="text"
+                  placeholder="Try &quot;Miami&quot;"
+                  value={props.value}
+                />
               </LogoSearch>
             </div>
 
