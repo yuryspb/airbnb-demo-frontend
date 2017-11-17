@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 141px;
 `;
 
 export const WrapperMap = styled.section`

@@ -3,9 +3,10 @@ import React from "react";
 import Header from "../Header";
 import Card from "./Card";
 import Paginator from "./Paginator";
-import Maps from "./Map";
+import Maps from "./Maps";
 
 import { Filters, Filter, Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
+import Dates from "./Filters/Dates";
 
 import btn from "./btnMap.png";
 import img1 from "./home1.png";
@@ -22,12 +23,7 @@ export default function() {
 
       <Filters>
         <div className="container">
-          <Filter>Dates</Filter>
-          <Filter>Guests</Filter>
-          <Filter fShow>Room type</Filter>
-          <Filter fShow>Price</Filter>
-          <Filter fShow>Instant book</Filter>
-          <Filter>More filters</Filter>
+          <Dates />
         </div>
       </Filters>
 

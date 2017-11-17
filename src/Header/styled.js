@@ -23,6 +23,7 @@ export const Row = styled.div`
 export const LogoSearch = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Input = styled.input`
@@ -37,6 +38,8 @@ export const Input = styled.input`
   border-radius: 4px;
   background: url(${search}) no-repeat 16px 50%;
   box-shadow: 0 1px 0 0 rgba(72, 72, 72, 0.08);
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 16px;
 `;
 
 export const Nav = styled.nav`
@@ -49,8 +52,9 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Link = styled.a`
+export const Links = styled.a`
   text-decoration: none;
   color: #383838;
+  font-family: "Circular Air Book", sans-serif;
   font-size: 14px;
 `;

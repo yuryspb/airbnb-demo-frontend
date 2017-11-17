@@ -3,16 +3,17 @@ import styled from "styled-components";
 export const Explore = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 39px;
+  margin-top: 105px;
 
   @media (min-width: 576px) {
-    margin-top: 48px;
+    margin-top: 115px;
   }
 `;
 
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
+  padding-left: 10px;
   text-align: left;
 
   @media (min-width: 576px) {

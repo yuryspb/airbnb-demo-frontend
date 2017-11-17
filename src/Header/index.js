@@ -1,6 +1,7 @@
 import React from "react";
-import { Header, Row, LogoSearch, Input, Nav, Link } from "./styled";
+import { Header, Row, LogoSearch, Input, Nav, Links } from "./styled";
 import logo from "./airbnbLogo.svg";
+import { Link } from "react-router-dom";
 
 export default function(props) {
   return (
@@ -10,7 +11,9 @@ export default function(props) {
           <Row>
             <div className="col-xs-10 col-lg-5">
               <LogoSearch>
-                <img src={logo} alt="logo" />
+                <Link to="../">
+                  <img src={logo} alt="logo" />
+                </Link>
 
                 <Input
                   type="text"
@@ -22,10 +25,10 @@ export default function(props) {
 
             <div className="col-xs-4">
               <Nav>
-                <Link href="#">Become a host</Link>
-                <Link href="#">Help</Link>
-                <Link href="#">Sign Up</Link>
-                <Link href="#">Log In</Link>
+                <Links href="#">Become a host</Links>
+                <Links href="#">Help</Links>
+                <Links href="#">Sign Up</Links>
+                <Links href="#">Log In</Links>
               </Nav>
             </div>
           </Row>
