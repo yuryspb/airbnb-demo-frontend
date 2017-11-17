@@ -3,10 +3,11 @@ import React from "react";
 import Header from "../Header";
 import Card from "./Card";
 import Paginator from "./Paginator";
-import Map from "./Map";
+import Maps from "./Map";
 
-import { Filters, Filter, Wrapper, Footer, WrapperMap } from "./styled";
+import { Filters, Filter, Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
 
+import btn from "./btnMap.png";
 import img1 from "./home1.png";
 import img2 from "./home2.png";
 import img3 from "./home3.png";
@@ -112,9 +113,12 @@ export default function() {
           </div>
           <div className="col-lg-4">
             <WrapperMap>
-              <Map center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
+              <Maps center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
             </WrapperMap>
           </div>
+          <BtnMap href="#">
+            <img src={btn} alt="Map" />
+          </BtnMap>
         </div>
       </div>
     </div>
