@@ -5,8 +5,8 @@ import Card from "./Card";
 import Paginator from "./Paginator";
 import Maps from "./Maps";
 
-import { Filters, Filter, Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
-import Dates from "./Filters/Dates";
+import { Filter, Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
+import Filters from "./Filters";
 
 import btn from "./btnMap.png";
 import img1 from "./home1.png";
@@ -21,11 +21,7 @@ export default function() {
     <div>
       <Header value="Anywhere · Homes" />
 
-      <Filters>
-        <div className="container">
-          <Dates />
-        </div>
-      </Filters>
+      <Filters />
 
       <div className="container">
         <div className="row">

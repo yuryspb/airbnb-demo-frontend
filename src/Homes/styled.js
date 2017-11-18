@@ -8,6 +8,14 @@ export const container = styled.div`
   padding-right: 8px;
 `;
 
+export const ContainerFlex = styled.div`
+  margin: auto;
+  max-width: 976px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+`;
+
 export const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
@@ -18,42 +26,14 @@ export const Wrapper = styled.section`
 
 export const WrapperMap = styled.section`
   display: none;
+
   @media (min-width: 991px) {
     display: block;
     position: fixed;
     top: 137px;
     bottom: 0;
     right: 0;
-    left: calc(50% + 163px); 
-`;
-
-export const Filters = styled.header`
-  position: fixed;
-  width: 100%;
-  background-color: #fff;
-  margin-top: 80px;
-  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
-  z-index: 9;
-  min-height: 56px;
-  margin-bottom: 1px;
-`;
-
-export const Filter = styled.div`
-  padding: 7px 16px;
-  margin-right: 12px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  border-radius: 4px;
-  font-family: "Circular Air Book", sans-serif;
-  font-size: 14px;
-  color: #383838;
-
-  @media (min-width: 320px) {
-    display: ${props => (props.fShow ? "none" : "inline-block")};
-  }
-  @media (min-width: 991px) {
-    display: inline-block;
+    left: calc(50% + 163px);
   }
 `;
 
@@ -79,4 +59,16 @@ export const BtnMap = styled.a`
   @media (min-width: 991px) {
     display: none;
   }
+`;
+
+export const Filters = styled.div`
+  position: fixed;
+  margin-top: 81px;
+  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
+  padding: 12px 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  z-index: 11;
 `;
