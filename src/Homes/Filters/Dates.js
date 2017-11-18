@@ -2,10 +2,10 @@ import React from "react";
 
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
-
+import MediaQuery from "react-responsive";
 import styled from "styled-components";
 
-import { DayPicker } from "react-dates";
+import { DayPickerRangeController } from "react-dates";
 import { Filter } from "../styled";
 
 const CalendarWrapper = styled.div`
@@ -53,17 +53,44 @@ export default class Dates extends React.Component {
         )}
         {this.state.isOpen && (
           <CalendarWrapper>
-            <DayPicker
-              startDate={this.state.startDate}
-              endDate={this.state.endDate}
-              onDatesChange={({ startDate, endDate }) => {
-                this.setState({ startDate, endDate });
-              }}
-              focusedInput={this.state.focusedInput}
-              onFocusChange={focusedInput => {
-                this.setState({ focusedInput });
-              }}
-            />
+            <MediaQuery maxWidth="991px">
+              <DayPickerRangeController
+                numberOfMonths={1}
+                hideKeyboardShortcutsPanel
+                initialVisibleMonth={null}
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => {
+                  this.setState({ startDate, endDate });
+                }}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => {
+                  this.setState({ focusedInput });
+                }}
+              />
+              {this.props.children}
+              <Button>Cancel</Button>
+              <Button isApply>Apply</Button>
+            </MediaQuery>
+            <MediaQuery minWidth="992px">
+              <DayPickerRangeController
+                numberOfMonths={2}
+                hideKeyboardShortcutsPanel
+                initialVisibleMonth={null}
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => {
+                  this.setState({ startDate, endDate });
+                }}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => {
+                  this.setState({ focusedInput });
+                }}
+              />
+              {this.props.children}
+              <Button>Cancel</Button>
+              <Button isApply>Apply</Button>
+            </MediaQuery>
           </CalendarWrapper>
         )}
         <Filter>Guests</Filter>

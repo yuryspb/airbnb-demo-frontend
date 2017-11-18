@@ -19,6 +19,7 @@ export const Wrapper = styled.section`
 export const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
+  padding-left: 8px;
 
   @media (min-width: 576px) {
     font-size: 32px;
@@ -83,7 +84,7 @@ export const BtnNext = styled.a`
     display: block;
     position: absolute;
     top: 180px;
-    right: -35px;
+    right: -18px;
     width: 40px;
     height: 40px;
   }

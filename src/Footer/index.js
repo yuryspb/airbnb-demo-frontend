@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Footer,
   FirstRow,
@@ -14,10 +14,10 @@ import {
   SocialLink,
   DotInfo,
   SelectorsField
-} from './styled';
-import logo from './airbnbLogo.svg';
-import iconFacebook from './facebook.svg';
-import iconTwitter from './twitter.svg';
+} from "./styled";
+import logo from "./airbnbLogo.svg";
+import iconFacebook from "./facebook.svg";
+import iconTwitter from "./twitter.svg";
 
 export default function() {
   return (
@@ -36,7 +36,7 @@ export default function() {
               </SelectorsField>
             </div>
 
-            <div className="col-8">
+            <div className="col-sm-8 col-md-8">
               <NavContainer>
                 <Nav>
                   <NavTitle>Airbnb</NavTitle>

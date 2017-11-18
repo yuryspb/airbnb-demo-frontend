@@ -6,7 +6,7 @@ export const Header = styled.header`
   width: 100%;
   background-color: white;
   z-index: 10;
-  border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
   min-height: 80px;
 `;
 
@@ -30,7 +30,7 @@ export const Input = styled.input`
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  margin-left: 24px;
+  margin-left: 51px;
   padding-left: 50px;
   height: 48px;
   padding-left: 51px;
@@ -48,7 +48,7 @@ export const Nav = styled.nav`
   @media (min-width: 991px) {
     display: flex;
     justify-content: space-around;
-    width: 300px;
+    width: 100%;
   }
 `;
 

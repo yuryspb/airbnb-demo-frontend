@@ -9,7 +9,7 @@ export default function(props) {
       <div className="container">
         <div className="row">
           <Row>
-            <div className="col-xs-10 col-lg-5">
+            <div className="col-xs-10 col-lg-6">
               <LogoSearch>
                 <Link to="../">
                   <img src={logo} alt="logo" />

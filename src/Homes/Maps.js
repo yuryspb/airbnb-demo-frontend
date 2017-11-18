@@ -1,6 +1,5 @@
 import React from "react";
 import GoogleMap from "google-map-react";
-import styled from "styled-components";
 
 export default props => {
   return (
@@ -8,7 +7,7 @@ export default props => {
       defaultCenter={props.center}
       defaultZoom={props.zoom}
       bootstrapURLKeys={{
-        key: "AIzaSyCkMgp7f5HRqQrShfGIitsLFJWcB3F1c6c",
+        key: process.env.REACT_APP_SECRET_CODE,
         language: "en"
       }}
     />

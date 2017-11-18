@@ -21,6 +21,8 @@ export const Title = styled.h2`
   margin-bottom: 20px;
   text-align: left;
 
+  padding-left: 8px;
+
   @media (min-width: 576px) {
     font-size: 32px;
   }
@@ -31,7 +33,8 @@ export const LinkSeeAll = styled.a`
   width: 55px;
   margin-bottom: -15px;
   background: url(${arrow}) no-repeat 100% 50%;
-  font: 14px "Circular Air Book", sans-serif;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 14px;
   color: #383838;
   text-decoration: none;
 `;
@@ -40,8 +43,8 @@ export const Link = styled.a`
   text-align: left;
   text-decoration: none;
   color: #383838;
-  font-size: 12px;
   font-family: "Circular Air Book", sans-serif;
+  font-size: 12px;
 `;
 
 export const Img = styled.img``;
@@ -58,7 +61,8 @@ export const Info = styled.p`
 `;
 
 export const PlaceType = styled.span`
-  font: 8px "Circular", sans-serif;
+  font-family: "Circular", sans-serif;
+  font-size: 8px;
   text-transform: uppercase;
 
   @media (min-width: 576px) {
@@ -67,7 +71,8 @@ export const PlaceType = styled.span`
 `;
 
 export const Price = styled.span`
-  font: 12px "Circular Air Light", sans-serif;
+  font-family: "Circular Air Light", sans-serif;
+  font-size: 12px;
   margin-right: 5px;
 
   @media (min-width: 576px) {
@@ -78,7 +83,8 @@ export const Price = styled.span`
 export const Name = styled.p`
   margin-top: 5px;
   margin-bottom: 5px;
-  font: 14px "Circular", sans-serif;
+  font-family: "Circular", sans-serif;
+  font-size: 14px;
   font-weight: bold;
 
   @media (min-width: 576px) {
@@ -93,7 +99,7 @@ export const BtnNext = styled.a`
     display: block;
     position: absolute;
     top: 160px;
-    right: -35px;
+    right: -18px;
     width: 40px;
     height: 40px;
   }

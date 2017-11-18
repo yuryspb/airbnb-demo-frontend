@@ -2,11 +2,12 @@ import styled from "styled-components";
 import arrow from "./arrowDown.svg";
 
 export const Footer = styled.footer`
-  margin-top: 40px;
-  border-top: 1px solid rgba(72, 72, 72, 0.3);
+  margin-top: 28px;
+  box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
+  width: 100%;
 
   @media (min-width: 576px) {
-    margin-top: 65px;
+    margin-top: 50px;
   }
 `;
 
@@ -15,10 +16,10 @@ export const FirstRow = styled.div`
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 16px;
 
   @media (min-width: 576px) {
-    padding-top: 50px;
+    padding-top: 48px;
   }
 `;
 
@@ -41,7 +42,9 @@ export const Select = styled.select`
   padding-left: 10px;
   border-radius: 4px;
   color: #383838;
-  font: 12px "Circular Air Light", sans-serif;
+  box-shadow: 1px rgba(72, 72, 72, 0.2);
+  font-family: "Circular Air Light", sans-serif;
+  font-size: 12px;
   background: url(${arrow}) no-repeat 95% 50%;
   appearance: none;
   ::-ms-expand {
@@ -77,7 +80,8 @@ export const Nav = styled.nav`
 
 export const NavTitle = styled.span`
   margin-bottom: 12px;
-  font: 12px "Circular Air Bold", sans-serif;
+  font-family: "Circular Air Bold", sans-serif;
+  font-size: 12px;
   font-weight: bold;
 
   @media (min-width: 911px) {
@@ -89,7 +93,8 @@ export const Link = styled.a`
   margin-bottom: 8px;
   text-decoration: none;
   color: #383838;
-  font: 12px "Circular Air Book", sans-serif;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 12px;
 
   @media (min-width: 911px) {
     font-size: 15px;
@@ -110,6 +115,8 @@ export const LastRow = styled.div`
     margin-top: 40px;
     flex-direction: row;
     align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
   @media (min-width: 768px) {
     font-size: 15px;
@@ -127,17 +134,17 @@ export const Info = styled.div`
 export const Copyright = styled.p`
   display: flex;
   align-items: center;
-  font: 15px "Circular Air Book", sans-serif;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 15px;
 `;
 
-export const Logo = styled.img`
-  margin-right: 12px;
-`;
+export const Logo = styled.img`margin-right: 12px;`;
 
 export const SocialLink = styled.a`
   text-decoration: none;
   color: #636363;
-  font: 15px "Circular Air Book", sans-serif;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 15px;
 `;
 
 export const DotInfo = styled.span`

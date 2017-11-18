@@ -5,7 +5,7 @@ import arrow from "./paginArrow.svg";
 
 const Pagination = styled.div`
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
 `;
 
 const Page = styled.button`
@@ -15,6 +15,8 @@ const Page = styled.button`
   border-radius: 100%;
   border: none;
   margin-right: 12px;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 16px;
 
   ${props =>
     props.active ? "background-color:#008489" : "background-color:white"};

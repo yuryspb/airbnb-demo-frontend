@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Destinations = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 16px;
+  padding-top: 11px;
 
   @media (min-width: 576px) {
-    padding-top: 25px;
+    padding-top: 20px;
   }
 `;
 
@@ -48,7 +48,7 @@ export const BtnNext = styled.a`
     display: block;
     position: absolute;
     top: 200px;
-    right: -35px;
+    right: -18px;
     width: 40px;
     height: 40px;
   }
