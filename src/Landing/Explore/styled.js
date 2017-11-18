@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Links = styled(Link)`
+export const RLink = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: left;

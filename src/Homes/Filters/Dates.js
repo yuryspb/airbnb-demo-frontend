@@ -11,6 +11,9 @@ import { Filter } from "../styled";
 const CalendarWrapper = styled.div`
   position: absolute;
   top: 50px;
+  @media (min-width: 576px) {
+    top: 50px;
+  }
 `;
 
 const Button = styled(Filter)`
@@ -53,25 +56,6 @@ export default class Dates extends React.Component {
         )}
         {this.state.isOpen && (
           <CalendarWrapper>
-            <MediaQuery maxWidth="991px">
-              <DayPickerRangeController
-                numberOfMonths={1}
-                hideKeyboardShortcutsPanel
-                initialVisibleMonth={null}
-                startDate={this.state.startDate}
-                endDate={this.state.endDate}
-                onDatesChange={({ startDate, endDate }) => {
-                  this.setState({ startDate, endDate });
-                }}
-                focusedInput={this.state.focusedInput}
-                onFocusChange={focusedInput => {
-                  this.setState({ focusedInput });
-                }}
-              />
-              {this.props.children}
-              <Button>Cancel</Button>
-              <Button isApply>Apply</Button>
-            </MediaQuery>
             <MediaQuery minWidth="992px">
               <DayPickerRangeController
                 numberOfMonths={2}
@@ -87,9 +71,42 @@ export default class Dates extends React.Component {
                   this.setState({ focusedInput });
                 }}
               />
-              {this.props.children}
-              <Button>Cancel</Button>
-              <Button isApply>Apply</Button>
+            </MediaQuery>
+
+            <MediaQuery minWidth={576} maxWidth={990}>
+              <DayPickerRangeController
+                numberOfMonths={1}
+                hideKeyboardShortcutsPanel
+                orientation="horizontal"
+                initialVisibleMonth={null}
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => {
+                  this.setState({ startDate, endDate });
+                }}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => {
+                  this.setState({ focusedInput });
+                }}
+              />
+            </MediaQuery>
+
+            <MediaQuery maxWidth="575px">
+              <DayPickerRangeController
+                numberOfMonths={3}
+                hideKeyboardShortcutsPanel
+                orientation="vertical"
+                initialVisibleMonth={null}
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => {
+                  this.setState({ startDate, endDate });
+                }}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => {
+                  this.setState({ focusedInput });
+                }}
+              />
             </MediaQuery>
           </CalendarWrapper>
         )}
