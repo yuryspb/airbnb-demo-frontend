@@ -9,6 +9,7 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+
   @media (min-width: 576px) {
     display: none;
   }
@@ -30,16 +31,15 @@ const Footer = styled.div`
 const Button = styled.button`
   margin-right: 12px;
   padding: 7px 16px;
-
-  display: ${props => (props.fShow ? "none" : "block")};
-  background-color: ${props => (props.isOpen ? "#008489" : "#fff")};
-  font-family: "Circular Air Book", sans-serif;
-  font-size: 14px;
-
-  color: ${props => (props.isOpen ? "#fff" : "#383838")};
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 14px;
   cursor: pointer;
+
+  display: ${props => (props.showLg ? "none" : "block")};
+  background-color: ${props => (props.isOpen ? "#008489" : "#fff")};
+  color: ${props => (props.isOpen ? "#fff" : "#383838")};
 
   @media (min-width: 991px) {
     display: flex;
@@ -153,7 +153,7 @@ export default class Dropdown extends React.Component {
         <Button
           onClick={this.toggleOpen}
           isOpen={this.state.isOpen}
-          fShow={this.props.fShow}
+          showLg={this.props.showLg}
         >
           {this.props.activeTitle && this.state.isOpen
             ? this.props.activeTitle

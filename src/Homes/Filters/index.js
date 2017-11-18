@@ -12,9 +12,9 @@ export default function() {
           <Calendar />
         </Dropdown>
         <Dropdown name="Guests" />
-        <Dropdown name="Room type" fShow />
-        <Dropdown name="Price" fShow />
-        <Dropdown name="Instant book" fShow />
+        <Dropdown name="Room type" showLg />
+        <Dropdown name="Price" showLg />
+        <Dropdown name="Instant book" showLg />
         <Dropdown name="More filters" />
       </ContainerFlex>
     </Filters>

@@ -54,6 +54,7 @@ export const Feauters = styled.span`
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
+  font-family: "Circular Air", sans-serif;
 
   @media (min-width: 576px) {
     padding-left: 24px;

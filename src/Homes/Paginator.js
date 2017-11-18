@@ -35,9 +35,12 @@ const Next = Page.extend`
 const Pages = styled.span`vertical-align: middle;`;
 
 const Info = styled.div`
+  color: #383838;
   padding-top: 16px;
   font-size: 16px;
   line-height: 19px;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 16px;
 `;
 
 export default props => {
