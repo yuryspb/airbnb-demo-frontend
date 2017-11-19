@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import arrow from "./arrow.svg";
 
-export const Experiences = styled.div`
+export const Homes = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 16px;
+  padding-top: 11px;
 
   @media (min-width: 576px) {
-    padding-top: 25px;
+    padding-top: 20px;
   }
 `;
 
@@ -19,6 +19,7 @@ export const Wrapper = styled.section`
 export const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
+  padding-left: 8px;
 
   @media (min-width: 576px) {
     font-size: 32px;
@@ -58,12 +59,18 @@ export const Info = styled.p`
 
 export const Price = styled.span`
   font-weight: 900;
+  font-size: 13px;
   margin-right: 5px;
+
+  @media (min-width: 576px) {
+    font-size: 15px;
+  }
 `;
 
-export const Name = styled.span`
-  font-family: "Circular Air Light", sans-serif;
-  font-size: 13px;
+export const Name = styled.p`
+  margin-top: 5px;
+  margin-bottom: 0;
+  font: 12px "Circular Air Light", sans-serif;
 
   @media (min-width: 576px) {
     font-size: 15px;
@@ -76,8 +83,8 @@ export const BtnNext = styled.a`
   @media (min-width: 991px) {
     display: block;
     position: absolute;
-    top: 250px;
-    right: -35px;
+    top: 180px;
+    right: -18px;
     width: 40px;
     height: 40px;
   }

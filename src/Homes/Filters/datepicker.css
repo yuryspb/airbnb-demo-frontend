@@ -1,0 +1,36 @@
+.CalendarMonth_table {
+  margin-top: 4px;
+}
+
+.DateRangePickerInput {
+  background-color: #008489;
+  border-radius: 4px;
+}
+.DateInput_input {
+  padding: 0;
+  border: none;
+}
+.DateInput {
+  background-color: transparent;
+}
+.DateInput input {
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+}
+.DateInput input:-webkit-input-placeholder {
+  color: #fff;
+}
+.DateInput_input__focused {
+  border: none;
+  background-color: transparent;
+}
+.DayPicker {
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 14px;
+  box-shadow: none;
+}
+.DayPickerNavigation_container {
+  display: none;
+}

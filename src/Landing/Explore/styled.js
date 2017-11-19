@@ -1,18 +1,20 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Explore = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 39px;
+  margin-top: 97px;
 
   @media (min-width: 576px) {
-    margin-top: 48px;
+    margin-top: 107px;
   }
 `;
 
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
+  padding-left: 7px;
   text-align: left;
 
   @media (min-width: 576px) {
@@ -25,10 +27,11 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Link = styled.a`
+export const RLink = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding-bottom: 10px;
   box-sizing: border-box;
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0 2px 0 0 rgba(72, 72, 72, 0.08);
@@ -38,6 +41,7 @@ export const Link = styled.a`
   @media (min-width: 576px) {
     flex-direction: row;
     align-items: center;
+    padding-bottom: 0px;
     width: 310px;
     height: 72px;
   }
@@ -50,6 +54,7 @@ export const Feauters = styled.span`
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
+  font-family: "Circular Air", sans-serif;
 
   @media (min-width: 576px) {
     padding-left: 24px;

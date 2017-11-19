@@ -1,90 +1,75 @@
 import styled from "styled-components";
-import arrow from "./arrow.svg";
 
-export const Homes = styled.div`
-  position: relative;
-  box-sizing: border-box;
-  padding-top: 11px;
+export const container = styled.div`
+  max-width: 1182px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+`;
 
-  @media (min-width: 576px) {
-    padding-top: 20px;
-  }
+export const ContainerFlex = styled.div`
+  margin: auto;
+  max-width: 976px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 export const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 141px;
+  margin-left: -7px;
 `;
 
-export const Title = styled.h2`
-  font-size: 24px;
-  margin-bottom: 20px;
-
-  @media (min-width: 576px) {
-    font-size: 32px;
-  }
-`;
-
-export const LinkSeeAll = styled.a`
-  align-self: center;
-  width: 55px;
-  margin-bottom: -15px;
-  background: url(${arrow}) no-repeat 100% 50%;
-  font: 14px "Circular Air Book", sans-serif;
-  color: #383838;
-  text-decoration: none;
-`;
-
-export const Link = styled.a`
-  text-align: left;
-  text-decoration: none;
-  color: #383838;
-  font-size: 12px;
-  font-family: "Circular Air Book", sans-serif;
-`;
-
-export const Img = styled.img``;
-
-export const Stars = styled.img`
-  width: 76px;
-  margin-right: 5px;
-`;
-
-export const Info = styled.p`
-  font-size: 15px;
-  margin-top: 7px;
-  margin-bottom: 3px;
-`;
-
-export const Price = styled.span`
-  font-weight: 900;
-  font-size: 13px;
-  margin-right: 5px;
-
-  @media (min-width: 576px) {
-    font-size: 15px;
-  }
-`;
-
-export const Name = styled.p`
-  margin-top: 5px;
-  margin-bottom: 0;
-  font: 12px "Circular Air Light", sans-serif;
-
-  @media (min-width: 576px) {
-    font-size: 15px;
-  }
-`;
-
-export const BtnNext = styled.a`
+export const WrapperMap = styled.section`
   display: none;
 
   @media (min-width: 991px) {
     display: block;
-    position: absolute;
-    top: 180px;
-    right: -35px;
-    width: 40px;
-    height: 40px;
+    position: fixed;
+    top: 137px;
+    bottom: 0;
+    right: 0;
+    left: calc(50% + 163px);
   }
+`;
+
+export const Footer = styled.section`
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 27px;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 16px;
+  color: #636363;
+`;
+
+export const BtnMap = styled.a`
+  position: fixed;
+  right: 8px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 767px) {
+    right: 4px;
+  }
+
+  @media (min-width: 991px) {
+    display: none;
+  }
+`;
+
+export const Filters = styled.div`
+  position: fixed;
+  margin-top: 81px;
+  border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
+  padding: 12px 6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  z-index: 11;
 `;

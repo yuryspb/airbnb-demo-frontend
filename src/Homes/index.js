@@ -1,76 +1,118 @@
 import React from "react";
-import {
-  Homes,
-  Wrapper,
-  Title,
-  LinkSeeAll,
-  Link,
-  Img,
-  Name,
-  Info,
-  Price,
-  Stars,
-  BtnNext
-} from "./styled";
-import stars from "./stars.svg";
-import btn from "./btn.svg";
-import pic1 from "./pic21.png";
-import pic2 from "./pic22.png";
-import pic3 from "./pic23.png";
+
+import Header from "../Header";
+import Card from "./Card";
+import Paginator from "./Paginator";
+import Maps from "./Maps";
+
+import { Filter, Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
+import Filters from "./Filters";
+
+import btn from "./btnMap.png";
+import img1 from "./home1.png";
+import img2 from "./home2.png";
+import img3 from "./home3.png";
+import img4 from "./home4.png";
+import img5 from "./home5.png";
+import img6 from "./home6.png";
 
 export default function() {
   return (
-    <Homes>
-      <div className="row">
-        <div className="col-12">
-          <Wrapper>
-            <Title>Homes</Title>
-            <LinkSeeAll href="#">See all&nbsp;&nbsp;&nbsp;</LinkSeeAll>
-          </Wrapper>
+    <div>
+      <Header value="Anywhere · Homes" />
+
+      <Filters />
+
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 col-lg-8">
+            <main>
+              <Wrapper>
+                <div className="col-xs-12 col-md-6 col-lg-6">
+                  <Card
+                    title="La Salentina, see, nature & relax"
+                    img={img1}
+                    alt="La Salentina, see, nature & relax"
+                    price={82}
+                    type="Entire house"
+                    beds="9 beds"
+                    reviews={97}
+                  />
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-6">
+                  <Card
+                    title="Your private 3 bedr. riad and exclusi..."
+                    img={img2}
+                    alt="Your private 3 bedr. riad and exclusi..."
+                    price={82}
+                    type="Entire house"
+                    beds="5 beds"
+                    reviews={161}
+                  />
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-6">
+                  <Card
+                    title="Dreamy Tropical Tree House"
+                    img={img3}
+                    alt="Dreamy Tropical Tree House"
+                    price={200}
+                    type="Entire treehouse"
+                    beds="1 bed"
+                    reviews={364}
+                    paddingBottom={24}
+                  />
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-6">
+                  <Card
+                    title="Best location old town luxury loft"
+                    img={img4}
+                    alt="Best location old town luxury loft"
+                    price={110}
+                    type="Entire apartment"
+                    beds="1 bed"
+                    reviews={369}
+                  />
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-6">
+                  <Card
+                    title="Lussuoso. Vista incantevole."
+                    img={img5}
+                    alt="Lussuoso. Vista incantevole."
+                    price={83}
+                    type="Entire apartment"
+                    beds="6 bed"
+                    reviews={105}
+                  />
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-6">
+                  <Card
+                    title="In the historical center of Lecce"
+                    img={img6}
+                    alt="In the historical center of Lecce"
+                    price={72}
+                    type="Entire house"
+                    beds="1 bed"
+                    reviews={221}
+                  />
+                </div>
+              </Wrapper>
+            </main>
+            <Paginator />
+            <Footer>
+              Enter dates to see full pricing. Additional fees apply. Taxes may
+              be added.
+            </Footer>
+          </div>
+          <div className="col-lg-4">
+            <WrapperMap>
+              <Maps center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
+            </WrapperMap>
+          </div>
+          <BtnMap href="#">
+            <img src={btn} alt="Map" />
+          </BtnMap>
         </div>
       </div>
-      <div className="row">
-        <div className="col-12">
-          <Wrapper>
-            <div className="col-xs-8 col-sm-5 col-md-4">
-              <Link href="#">
-                <Img src={pic1} />
-                <Info>
-                  <Price>$82 La Salentina, see, nature & relax</Price>
-                  <Name>Entire house &#183; 9 beds</Name>
-                </Info>
-                <Stars src={stars} />
-                97 &#183; Superhost
-              </Link>
-            </div>
-            <div className="col-xs-8 col-sm-5 col-md-4">
-              <Link href="#">
-                <Img src={pic2} />
-                <Info>
-                  <Price>$82 Your private 3 bedr. riad and exclusi...</Price>
-                  <Name>Entire house &#183; 5 beds</Name>
-                </Info>
-                <Stars src={stars} />
-                161 &#183; Superhost
-              </Link>
-            </div>
-            <div className="col-xs-8 col-sm-5 col-md-4">
-              <Link href="#">
-                <Img src={pic3} />
-                <Info>
-                  <Price>$200 Dreamy Tropical Tree House</Price>
-                  <Name>Entire house &#183; 1 bed</Name>
-                </Info>
-                <Stars src={stars} />
-                364 &#183; Superhost
-              </Link>
-            </div>
-          </Wrapper>
-        </div>
-      </div>
-      <BtnNext href="#">
-        <img src={btn} alt="arrow" />
-      </BtnNext>
-    </Homes>
+    </div>
   );
 }

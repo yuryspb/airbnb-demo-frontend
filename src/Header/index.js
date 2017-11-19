@@ -1,27 +1,34 @@
 import React from "react";
-import { Header, Row, LogoSearch, Input, Nav, Link } from "./styled";
+import { Header, Row, LogoSearch, Input, Nav, Links } from "./styled";
 import logo from "./airbnbLogo.svg";
+import { Link } from "react-router-dom";
 
-export default function() {
+export default function(props) {
   return (
     <Header>
       <div className="container">
         <div className="row">
           <Row>
-            <div className="col-xs-8 col-12">
+            <div className="col-xs-10 col-lg-6">
               <LogoSearch>
-                <img src={logo} alt="logo" />
+                <Link to="../">
+                  <img src={logo} alt="logo" />
+                </Link>
 
-                <Input type="text" placeholder="Try &quot;Miami&quot;" />
+                <Input
+                  type="text"
+                  placeholder="Try &quot;Miami&quot;"
+                  value={props.value}
+                />
               </LogoSearch>
             </div>
 
             <div className="col-xs-4">
               <Nav>
-                <Link href="#">Become a host</Link>
-                <Link href="#">Help</Link>
-                <Link href="#">Sign Up</Link>
-                <Link href="#">Log In</Link>
+                <Links href="#">Become a host</Links>
+                <Links href="#">Help</Links>
+                <Links href="#">Sign Up</Links>
+                <Links href="#">Log In</Links>
               </Nav>
             </div>
           </Row>

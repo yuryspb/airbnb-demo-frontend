@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import arrow from "./arrow.svg";
 
-export const Popular = styled.div`
+export const Experiences = styled.div`
   position: relative;
   box-sizing: border-box;
-  padding-top: 11px;
-
+  padding-top: 15px;
   @media (min-width: 576px) {
     padding-top: 20px;
   }
@@ -19,7 +18,7 @@ export const Wrapper = styled.section`
 export const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
-  text-align: left;
+  padding-left: 8px;
 
   @media (min-width: 576px) {
     font-size: 32px;
@@ -57,32 +56,17 @@ export const Info = styled.p`
   margin-bottom: 3px;
 `;
 
-export const PlaceType = styled.span`
-  font: 8px "Circular", sans-serif;
-  text-transform: uppercase;
-
-  @media (min-width: 576px) {
-    font-size: 10px;
-  }
-`;
-
 export const Price = styled.span`
-  font: 12px "Circular Air Light", sans-serif;
+  font-weight: 900;
   margin-right: 5px;
-
-  @media (min-width: 576px) {
-    font-size: 18px;
-  }
 `;
 
-export const Name = styled.p`
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font: 14px "Circular", sans-serif;
-  font-weight: bold;
+export const Name = styled.span`
+  font-family: "Circular Air Light", sans-serif;
+  font-size: 13px;
 
   @media (min-width: 576px) {
-    font-size: 18px;
+    font-size: 15px;
   }
 `;
 
@@ -92,8 +76,8 @@ export const BtnNext = styled.a`
   @media (min-width: 991px) {
     display: block;
     position: absolute;
-    top: 160px;
-    right: -35px;
+    top: 250px;
+    right: -18px;
     width: 40px;
     height: 40px;
   }
