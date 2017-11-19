@@ -12,11 +12,26 @@ import "./datepicker.css";
 const Calendar = styled.div``;
 
 export default class DatePicker extends React.Component {
-  state = {
-    startDate: null,
-    endDate: null,
-    focusedInput: null
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      focusedInput: null,
+      startDate: props.initialStartDate,
+      endDate: props.initialEndDate
+    };
+
+    this.onDatesChange = this.onDatesChange.bind(this);
+    this.onFocusChange = this.onFocusChange.bind(this);
+  }
+
+  onDatesChange({ startDate, endDate }) {
+    this.setState({ startDate, endDate });
+  }
+
+  onFocusChange(focusedInput) {
+    this.setState({ focusedInput });
+  }
 
   render() {
     return (
@@ -25,13 +40,9 @@ export default class DatePicker extends React.Component {
           <DayPickerRangeController
             startDate={this.state.startDate}
             endDate={this.state.endDate}
-            onDatesChange={({ startDate, endDate }) => {
-              this.setState({ startDate, endDate });
-            }}
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
             focusedInput={this.state.focusedInput}
-            onFocusChange={focusedInput => {
-              this.setState({ focusedInput });
-            }}
             hideKeyboardShortcutsPanel={true}
             numberOfMonths={2}
             isOutsideRange={day => day.isBefore(moment(), "day")}
@@ -41,13 +52,9 @@ export default class DatePicker extends React.Component {
           <DayPickerRangeController
             startDate={this.state.startDate}
             endDate={this.state.endDate}
-            onDatesChange={({ startDate, endDate }) => {
-              this.setState({ startDate, endDate });
-            }}
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
             focusedInput={this.state.focusedInput}
-            onFocusChange={focusedInput => {
-              this.setState({ focusedInput });
-            }}
             hideKeyboardShortcutsPanel={true}
             numberOfMonths={1}
             isOutsideRange={day => day.isBefore(moment(), "day")}
@@ -57,13 +64,9 @@ export default class DatePicker extends React.Component {
           <DayPickerRangeController
             startDate={this.state.startDate}
             endDate={this.state.endDate}
-            onDatesChange={({ startDate, endDate }) => {
-              this.setState({ startDate, endDate });
-            }}
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
             focusedInput={this.state.focusedInput}
-            onFocusChange={focusedInput => {
-              this.setState({ focusedInput });
-            }}
             hideKeyboardShortcutsPanel={true}
             numberOfMonths={2}
             orientation="vertical"

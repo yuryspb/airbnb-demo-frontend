@@ -20,6 +20,7 @@ export const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
   text-align: left;
+  color: #383838;
 
   padding-left: 8px;
 

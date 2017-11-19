@@ -36,6 +36,7 @@ const Button = styled.button`
   font-family: "Circular Air Book", sans-serif;
   font-size: 14px;
   cursor: pointer;
+  color: #383838;
 
   display: ${props => (props.showLg ? "none" : "block")};
   background-color: ${props => (props.isOpen ? "#008489" : "#fff")};
@@ -155,9 +156,7 @@ export default class Dropdown extends React.Component {
           isOpen={this.state.isOpen}
           showLg={this.props.showLg}
         >
-          {this.props.activeTitle && this.state.isOpen
-            ? this.props.activeTitle
-            : this.props.name}
+          {this.state.isOpen ? "Check in — Check out" : this.props.name}
         </Button>
         {this.state.isOpen && (
           <div>
@@ -166,16 +165,15 @@ export default class Dropdown extends React.Component {
                 <Close onClick={this.close}>
                   <img src={closeIcon} alt="arrow" />
                 </Close>
-                <Title>{this.props.name}</Title>
+                <Title />
                 <Clear>{this.props.clearTitle || "Reset"}</Clear>
               </Header>
-              {this.props.activeTitle && (
-                <MobileTitle>
-                  <Info isActive>Check-in</Info>
-                  <Arrow src={arrow} />
-                  <Info>Check-out</Info>
-                </MobileTitle>
-              )}
+              <MobileTitle>
+                <Info isActive>Check-in</Info>
+                <Arrow src={arrow} />
+                <Info>Check-out</Info>
+              </MobileTitle>
+
               {this.props.children}
               <Footer>
                 <ConfirmButton onClick={this.close}>Cancel</ConfirmButton>

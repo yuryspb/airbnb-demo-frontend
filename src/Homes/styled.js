@@ -43,6 +43,7 @@ export const Footer = styled.section`
   margin-bottom: 27px;
   font-family: "Circular Air Book", sans-serif;
   font-size: 16px;
+  color: #636363;
 `;
 
 export const BtnMap = styled.a`

@@ -18,6 +18,7 @@ export const Wrapper = styled.section`
 export const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
+  color: #383838;
 
   @media (min-width: 576px) {
     font-size: 32px;
