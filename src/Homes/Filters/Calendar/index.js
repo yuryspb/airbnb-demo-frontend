@@ -7,7 +7,7 @@ import moment from "moment";
 
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import "./datepicker.css";
+import "../datepicker.css";
 
 const Calendar = styled.div``;
 

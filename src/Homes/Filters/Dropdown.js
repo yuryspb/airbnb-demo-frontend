@@ -3,7 +3,7 @@ import styled from "styled-components";
 import arrow from "./arrowRight.svg";
 import closeIcon from "./close.svg";
 
-const Header = styled.header`
+export const Header = styled.header`
   display: flex;
   padding: 16px 8px;
   justify-content: space-between;
@@ -15,7 +15,7 @@ const Header = styled.header`
   }
 `;
 
-const Footer = styled.div`
+export const Footer = styled.div`
   display: flex;
   justify-content: center;
   position: absolute;
@@ -28,7 +28,7 @@ const Footer = styled.div`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   margin-right: 12px;
   padding: 7px 16px;
   border: 1px solid rgba(72, 72, 72, 0.2);
@@ -47,21 +47,21 @@ const Button = styled.button`
   }
 `;
 
-const Close = styled.a``;
+export const Close = styled.a``;
 
-const Title = styled.span`
+export const Title = styled.span`
   margin: 0;
   font-size: 14px;
   font-weight: normal;
 `;
 
-const Clear = styled.span`
+export const Clear = styled.span`
   font-family: "Circular Air Book", sans-serif;
   font-size: 14px;
   color: #0f7276;
 `;
 
-const ConfirmButton = styled.button`
+export const ConfirmButton = styled.button`
   display: none;
 
   @media (min-width: 576px) {
@@ -76,7 +76,7 @@ const ConfirmButton = styled.button`
   }
 `;
 
-const MobileButton = styled.button`
+export const MobileButton = styled.button`
   padding: 12px 132px;
   background-color: #ff5a5f;
   border: none;
@@ -90,7 +90,7 @@ const MobileButton = styled.button`
   }
 `;
 
-const MobileTitle = styled.div`
+export const MobileTitle = styled.div`
   padding-top: 40px;
   padding-left: 10px;
   display: flex;
@@ -99,7 +99,7 @@ const MobileTitle = styled.div`
   }
 `;
 
-const Info = styled.div`
+export const Info = styled.div`
   border: none;
   border-bottom: ${props => (props.isActive ? "1px solid #008489" : "none")};
   color: ${props => (props.isActive ? "#0F7276" : "#636363")};
@@ -107,12 +107,12 @@ const Info = styled.div`
   font-size: 18px;
 `;
 
-const Arrow = styled.img`
+export const Arrow = styled.img`
   margin-left: 16px;
   margin-right: 16px;
 `;
 
-const DropDownWrapper = styled.div`
+export const DropDownWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -135,59 +135,51 @@ const DropDownWrapper = styled.div`
   }
 `;
 
-export default class Dropdown extends React.Component {
-  state = {
-    isOpen: false
-  };
+export const Image = styled.img``;
 
-  toggleOpen = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
+export default function(props) {
+  return (
+    <div>
+      <Button
+        onClick={props.toggleOpen}
+        isOpen={props.isOpen}
+        showLg={props.showLg}
+        name={props.name}
+      >
+        {props.activeTitle && props.isOpen ? props.activeTitle : props.name}
+      </Button>
+      {props.isOpen && (
+        <div>
+          <DropDownWrapper>
+            <Header>
+              <Close onClick={props.toggleOpen}>
+                <img src={closeIcon} alt="arrow" />
+              </Close>
+              <Title>{props.name}</Title>
+              <Clear>{props.clearTitle || "Reset"}</Clear>
+            </Header>
 
-  close = () => {
-    this.setState({ isOpen: false });
-  };
-
-  render() {
-    return (
-      <div>
-        <Button
-          onClick={this.toggleOpen}
-          isOpen={this.state.isOpen}
-          showLg={this.props.showLg}
-        >
-          {this.state.isOpen ? "Check in — Check out" : this.props.name}
-        </Button>
-        {this.state.isOpen && (
-          <div>
-            <DropDownWrapper>
-              <Header>
-                <Close onClick={this.close}>
-                  <img src={closeIcon} alt="arrow" />
-                </Close>
-                <Title />
-                <Clear>{this.props.clearTitle || "Reset"}</Clear>
-              </Header>
+            {props.activeTitle && (
               <MobileTitle>
-                <Info isActive>Check-in</Info>
+                <Info isActive value="Check-in" />
                 <Arrow src={arrow} />
-                <Info>Check-out</Info>
+                <Info value="Check-out" />
               </MobileTitle>
+            )}
+            {props.children}
 
-              {this.props.children}
-              <Footer>
-                <ConfirmButton onClick={this.close}>Cancel</ConfirmButton>
-                <ConfirmButton onClick={this.close} isPrimary>
-                  Apply
-                </ConfirmButton>
-                {this.props.mobileTitle && (
-                  <MobileButton>{this.props.mobileTitle}</MobileButton>
-                )}
-              </Footer>
-            </DropDownWrapper>
-          </div>
-        )}
-      </div>
-    );
-  }
+            <Footer>
+              <ConfirmButton onClick={props.toggleOpen}>Cancel</ConfirmButton>
+              <ConfirmButton onClick={props.toggleOpen} isPrimary>
+                Apply
+              </ConfirmButton>
+              {props.mobileTitle && (
+                <MobileButton>{props.mobileTitle}</MobileButton>
+              )}
+            </Footer>
+          </DropDownWrapper>
+        </div>
+      )}
+    </div>
+  );
 }
