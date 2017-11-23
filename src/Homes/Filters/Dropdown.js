@@ -91,9 +91,10 @@ export const MobileButton = styled.button`
 `;
 
 export const MobileTitle = styled.div`
+  display: flex;
   padding-top: 40px;
   padding-left: 10px;
-  display: flex;
+
   @media (min-width: 576px) {
     display: none;
   }
@@ -121,17 +122,18 @@ export const DropDownWrapper = styled.div`
   background-color: #fff;
 
   @media (min-width: 576px) {
-    position: absolute;
     display: inline-block;
+    position: absolute;
     top: 100%;
     right: auto;
     left: auto;
     bottom: auto;
     background-color: #fff;
-    padding: 24px 16px 0 16px;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
     border: 1px solid rgba(72, 72, 72, 0.2);
     border-radius: 4px;
-    box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.08);
   }
 `;
 
@@ -146,7 +148,9 @@ export default function(props) {
         showLg={props.showLg}
         name={props.name}
       >
-        {props.activeTitle && props.isOpen ? props.activeTitle : props.name}
+        {props.setActiveTitle && props.isOpen
+          ? props.setActiveTitle()
+          : props.name}
       </Button>
       {props.isOpen && (
         <div>
@@ -159,13 +163,6 @@ export default function(props) {
               <Clear>{props.clearTitle || "Reset"}</Clear>
             </Header>
 
-            {props.activeTitle && (
-              <MobileTitle>
-                <Info isActive value="Check-in" />
-                <Arrow src={arrow} />
-                <Info value="Check-out" />
-              </MobileTitle>
-            )}
             {props.children}
 
             <Footer>

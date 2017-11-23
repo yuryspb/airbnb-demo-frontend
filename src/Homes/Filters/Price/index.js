@@ -9,6 +9,20 @@ const Price = styled.div`
   }
 `;
 
+const Title = styled.p`
+  margin-bottom: 24px;
+  font-family: "Circular Air Book", sans-serif;
+  font-size: 18px;
+
+  @media (min-width: 576px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 991px) {
+    display: none;
+  }
+`;
+
 const Name = styled.p`
   margin: 0;
   padding-bottom: 7px;
@@ -33,6 +47,7 @@ const Bargraph = styled.div`
 export default function() {
   return (
     <Price>
+      <Title>Price range</Title>
       <Name>$10 — $1000+</Name>
       <Annotation>The average nightly price is $75.</Annotation>
       <Bargraph>

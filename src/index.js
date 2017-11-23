@@ -5,6 +5,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import "normalize.css";
 import "flexboxgrid2";
 import "./index.css";
+import "./rheostat.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

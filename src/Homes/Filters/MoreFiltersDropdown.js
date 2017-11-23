@@ -11,13 +11,74 @@ import {
 } from "./Dropdown";
 import closeIcon from "./close.svg";
 
-const ConfirmButton = styled.button``;
+const DropDownWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  overflow: auto;
 
-const CancelButton = styled.button``;
+  @media (min-width: 576px) {
+    top: 136px;
+  }
 
-const Footer = styled.div``;
+  @media (min-width: 991px) {
+    display: inline-block;
+    top: 136px;
+    right: auto;
+    width: 60%;
+    background-color: #fff;
+    padding-left: 80px;
+  }
+`;
 
-const DropDownWrapper = styled.div``;
+const ConfirmButton = styled.button`
+  display: none;
+
+  @media (min-width: 576px) {
+    display: block;
+    padding: 12px 28px;
+    background-color: #008489;
+    font-family: "Circular", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+`;
+
+const CancelButton = styled.button`
+  display: none;
+
+  @media (min-width: 576px) {
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: "Circular Air Book", sans-serif;
+    font-size: 18px;
+    color: #383838;
+    background-color: transparent;
+    border: none;
+  }
+`;
+
+const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+
+  @media (min-width: 576px) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: 991px) {
+    justify-content: flex-end;
+    padding-top: 32px;
+  }
+`;
 
 export default function(props) {
   return (

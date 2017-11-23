@@ -56,6 +56,7 @@ const Button = styled.button`
   align-items: center;
   width: 32px;
   height: 32px;
+  opacity: ${props => (props.isDisabled ? 0.5 : 1)};
   border: 1px solid #008489;
   border-radius: 50%;
   background-color: #fff;
@@ -65,6 +66,9 @@ const Button = styled.button`
 const Num = styled.div`
   padding-left: 18px;
   padding-right: 18px;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Circular Air Light", sans-serif;
   font-size: 18px;
 `;
 
@@ -81,7 +85,7 @@ export default function(props) {
           <Button isDisabled>
             <Icon src={minus} />
           </Button>
-          <Num>{props.adults}</Num>
+          <Num>0</Num>
           <Button>
             <Icon src={plus} />
           </Button>
@@ -94,7 +98,7 @@ export default function(props) {
           <Button isDisabled>
             <Icon src={minus} />
           </Button>
-          <Num>{props.children}</Num>
+          <Num>0</Num>
           <Button>
             <Icon src={plus} />
           </Button>
@@ -107,7 +111,7 @@ export default function(props) {
           <Button isDisabled>
             <Icon src={minus} />
           </Button>
-          <Num>{props.infants}</Num>
+          <Num>0</Num>
           <Button>
             <Icon src={plus} />
           </Button>

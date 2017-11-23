@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import RadioBtn from "../../../UI/RadioButton";
 
 const InstantBook = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 326px;
+  width: 292px;
 `;
 
 const TextWrapper = styled.div`
@@ -24,16 +25,9 @@ const Annotation = styled.p`
   font-size: 14px;
 `;
 
-const RadioButton = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border: 1px solid rgba(72, 72, 72, 0.3);
-  border-radius: 50%;
+const RadioButton = styled(RadioBtn)`
+  display: none;
+  margin-left: 30px;
 `;
 
 export default function() {
