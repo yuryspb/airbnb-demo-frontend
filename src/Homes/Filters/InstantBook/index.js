@@ -13,13 +13,27 @@ const TextWrapper = styled.div`
 
 const Title = styled.p`
   margin: 0;
+  font-family: "Circular Air Book", sans-serif;
   font-size: 18px;
 `;
 
 const Annotation = styled.p`
   margin: 0;
   padding-top: 4px;
+  font-family: "Circular Air Light", sans-serif;
   font-size: 14px;
+`;
+
+const RadioButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 50%;
 `;
 
 export default function() {
@@ -31,6 +45,7 @@ export default function() {
           Listings you can book without waiting for host approval.
         </Annotation>
       </TextWrapper>
+      <RadioButton />
     </InstantBook>
   );
 }
