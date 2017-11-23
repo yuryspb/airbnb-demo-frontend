@@ -7,7 +7,7 @@ const Guests = styled.div`
   height: 100vh;
 
   @media (min-width: 576px) {
-    width: 310px;
+    width: 326px;
     height: auto;
   }
 `;
@@ -16,8 +16,8 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 `;
 
 const Content = styled.div`
@@ -27,6 +27,7 @@ const Content = styled.div`
 
 const Title = styled.p`
   margin: 0;
+  font-family: "Circular Air Book", sans-serif;
   font-size: 18px;
 
   @media (min-width: 576px) {
@@ -37,6 +38,7 @@ const Title = styled.p`
 const Annotation = styled.p`
   margin: 0;
   padding-top: 8px;
+  font-family: "Circular Air Light", sans-serif;
   font-size: 14px;
 
   @media (min-width: 576px) {
