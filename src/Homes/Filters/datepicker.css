@@ -31,6 +31,13 @@
   font-size: 14px;
   box-shadow: none;
 }
+
 .DayPickerNavigation_container {
   display: none;
+}
+
+@media (min-width: 576px) {
+  .DayPickerNavigation_container {
+    display: block;
+  }
 }
