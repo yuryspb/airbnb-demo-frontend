@@ -68,7 +68,7 @@ export default class DatePicker extends React.Component {
               value={
                 this.props.startDate
                   ? this.props.startDate.format("MMM Do")
-                  : "Check in"
+                  : "Check-in"
               }
             />
             <Arrow src={arrow} />
@@ -76,7 +76,7 @@ export default class DatePicker extends React.Component {
               value={
                 this.props.endDate
                   ? this.props.endDate.format("MMM Do")
-                  : "Check out"
+                  : "Check-out"
               }
             />
           </MobileForm>
