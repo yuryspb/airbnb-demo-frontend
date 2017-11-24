@@ -41,3 +41,18 @@
     display: block;
   }
 }
+
+@media (max-width: 575px) {
+  .DayPicker_weekHeader {
+    top: 130px;
+    position: fixed;
+    z-index: 15;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .CalendarMonth_caption {
+    padding-bottom: 8px;
+    padding-top: 16px;
+  }
+}

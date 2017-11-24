@@ -13,7 +13,7 @@ import arrow from "../arrowRight.svg";
 const Calendar = styled.div``;
 
 const Input = styled.input`
-  width: 30%;
+  width: 25%;
   font-family: "Circular Air Book", sans-serif;
   font-size: 18px;
   border: none;
@@ -21,10 +21,11 @@ const Input = styled.input`
   color: ${props => (props.isActive ? "#0F7276" : "#636363")};
 `;
 
-const MobileField = styled.div`
+const MobileForm = styled.div`
   display: flex;
   padding-top: 40px;
-  padding-left: 8px;
+  padding-bottom: 20px;
+  padding-left: 10px;
 `;
 
 const Arrow = styled.img`
@@ -61,7 +62,7 @@ export default class DatePicker extends React.Component {
           />
         </MediaQuery>
         <MediaQuery maxWidth="575px">
-          <MobileField>
+          <MobileForm>
             <Input
               isActive
               value={
@@ -78,14 +79,14 @@ export default class DatePicker extends React.Component {
                   : "Check out"
               }
             />
-          </MobileField>
+          </MobileForm>
           <DayPickerRangeController
             startDate={this.props.startDate}
             endDate={this.props.endDate}
             hideKeyboardShortcutsPanel={true}
             numberOfMonths={2}
             orientation="vertical"
-            verticalHeight={590}
+            verticalHeight={530}
             isOutsideRange={day => day.isBefore(moment(), "day")}
             focusedInput={this.props.focusedInput}
             onDatesChange={this.props.onDatesChange}
