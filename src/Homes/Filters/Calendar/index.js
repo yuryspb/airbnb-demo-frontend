@@ -33,67 +33,59 @@ const Arrow = styled.img`
   margin-right: 16px;
 `;
 
-export default class DatePicker extends React.Component {
-  render() {
-    return (
-      <Calendar>
-        <MediaQuery minWidth="991px">
-          <DayPickerRangeController
-            startDate={this.props.startDate}
-            endDate={this.props.endDate}
-            hideKeyboardShortcutsPanel={true}
-            numberOfMonths={2}
-            isOutsideRange={day => day.isBefore(moment(), "day")}
-            focusedInput={this.props.focusedInput}
-            onDatesChange={this.props.onDatesChange}
-            onFocusChange={this.props.onFocusChange}
+export default function(props) {
+  return (
+    <Calendar>
+      <MediaQuery minWidth="991px">
+        <DayPickerRangeController
+          startDate={props.startDate}
+          endDate={props.endDate}
+          hideKeyboardShortcutsPanel={true}
+          numberOfMonths={2}
+          isOutsideRange={day => day.isBefore(moment(), "day")}
+          focusedInput={props.focusedInput}
+          onDatesChange={props.onDatesChange}
+          onFocusChange={props.onFocusChange}
+        />
+      </MediaQuery>
+      <MediaQuery minWidth={576} maxWidth={991}>
+        <DayPickerRangeController
+          startDate={props.startDate}
+          endDate={props.endDate}
+          hideKeyboardShortcutsPanel={true}
+          numberOfMonths={1}
+          isOutsideRange={day => day.isBefore(moment(), "day")}
+          focusedInput={props.focusedInput}
+          onDatesChange={props.onDatesChange}
+          onFocusChange={props.onFocusChange}
+        />
+      </MediaQuery>
+      <MediaQuery maxWidth="575px">
+        <MobileForm>
+          <Input
+            isActive
+            value={
+              props.startDate ? props.startDate.format("MMM Do") : "Check in"
+            }
           />
-        </MediaQuery>
-        <MediaQuery minWidth={576} maxWidth={991}>
-          <DayPickerRangeController
-            startDate={this.props.startDate}
-            endDate={this.props.endDate}
-            hideKeyboardShortcutsPanel={true}
-            numberOfMonths={1}
-            isOutsideRange={day => day.isBefore(moment(), "day")}
-            focusedInput={this.props.focusedInput}
-            onDatesChange={this.props.onDatesChange}
-            onFocusChange={this.props.onFocusChange}
+          <Arrow src={arrow} />
+          <Input
+            value={props.endDate ? props.endDate.format("MMM Do") : "Check out"}
           />
-        </MediaQuery>
-        <MediaQuery maxWidth="575px">
-          <MobileForm>
-            <Input
-              isActive
-              value={
-                this.props.startDate
-                  ? this.props.startDate.format("MMM Do")
-                  : "Check-in"
-              }
-            />
-            <Arrow src={arrow} />
-            <Input
-              value={
-                this.props.endDate
-                  ? this.props.endDate.format("MMM Do")
-                  : "Check-out"
-              }
-            />
-          </MobileForm>
-          <DayPickerRangeController
-            startDate={this.props.startDate}
-            endDate={this.props.endDate}
-            hideKeyboardShortcutsPanel={true}
-            numberOfMonths={2}
-            orientation="vertical"
-            verticalHeight={530}
-            isOutsideRange={day => day.isBefore(moment(), "day")}
-            focusedInput={this.props.focusedInput}
-            onDatesChange={this.props.onDatesChange}
-            onFocusChange={this.props.onFocusChange}
-          />
-        </MediaQuery>
-      </Calendar>
-    );
-  }
+        </MobileForm>
+        <DayPickerRangeController
+          startDate={props.startDate}
+          endDate={props.endDate}
+          hideKeyboardShortcutsPanel={true}
+          numberOfMonths={2}
+          orientation="vertical"
+          verticalHeight={530}
+          isOutsideRange={day => day.isBefore(moment(), "day")}
+          focusedInput={props.focusedInput}
+          onDatesChange={props.onDatesChange}
+          onFocusChange={props.onFocusChange}
+        />
+      </MediaQuery>
+    </Calendar>
+  );
 }

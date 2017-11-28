@@ -30,7 +30,7 @@ const RadioButton = styled(RadioBtn)`
   margin-left: 30px;
 `;
 
-export default function() {
+export default function(props) {
   return (
     <InstantBook>
       <TextWrapper>
@@ -39,7 +39,7 @@ export default function() {
           Listings you can book without waiting for host approval.
         </Annotation>
       </TextWrapper>
-      <RadioButton />
+      <RadioButton isChecked={props.isChecked} onToggle={props.onToggle} />
     </InstantBook>
   );
 }

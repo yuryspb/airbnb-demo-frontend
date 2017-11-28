@@ -61,6 +61,7 @@ const Button = styled.button`
   border-radius: 50%;
   background-color: #fff;
   color: #008489;
+  cursor: pointer;
 `;
 
 const Num = styled.div`
@@ -75,6 +76,9 @@ const Num = styled.div`
 const Icon = styled.img``;
 
 export default function(props) {
+  const plusCount = e => props.handlePlusCount(e.target.name);
+  const minusCount = e => props.handleMinusCount(e.target.name);
+
   return (
     <Guests>
       <Content>
@@ -82,11 +86,19 @@ export default function(props) {
           <TextWrapper>
             <Title>Adults</Title>
           </TextWrapper>
-          <Button isDisabled>
+          <Button
+            isDisabled={props.guests.adults <= props.guestsMin}
+            onClick={minusCount}
+            name="adults"
+          >
             <Icon src={minus} />
           </Button>
-          <Num>0</Num>
-          <Button>
+          <Num>{props.guests.adults}</Num>
+          <Button
+            isDisabled={props.guests.adults >= props.guestsMax}
+            onClick={plusCount}
+            name="adults"
+          >
             <Icon src={plus} />
           </Button>
         </Row>
@@ -95,11 +107,19 @@ export default function(props) {
             <Title>Children</Title>
             <Annotation>Ages 2 — 12</Annotation>
           </TextWrapper>
-          <Button isDisabled>
+          <Button
+            isDisabled={props.guests.children <= props.guestsMin}
+            onClick={minusCount}
+            name="children"
+          >
             <Icon src={minus} />
           </Button>
-          <Num>0</Num>
-          <Button>
+          <Num>{props.guests.children}</Num>
+          <Button
+            isDisabled={props.guests.children >= props.guestsMax}
+            onClick={plusCount}
+            name="children"
+          >
             <Icon src={plus} />
           </Button>
         </Row>
@@ -108,11 +128,19 @@ export default function(props) {
             <Title>Infants</Title>
             <Annotation>Under 2</Annotation>
           </TextWrapper>
-          <Button isDisabled>
+          <Button
+            isDisabled={props.guests.infants <= props.guestsMin}
+            onClick={minusCount}
+            name="infants"
+          >
             <Icon src={minus} />
           </Button>
-          <Num>0</Num>
-          <Button>
+          <Num>{props.guests.infants}</Num>
+          <Button
+            isDisabled={props.guests.infants >= props.guestsMax}
+            onClick={plusCount}
+            name="infants"
+          >
             <Icon src={plus} />
           </Button>
         </Row>

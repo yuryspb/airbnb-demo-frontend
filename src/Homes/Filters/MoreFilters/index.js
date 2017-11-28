@@ -26,27 +26,47 @@ const Filter = styled.div`
   }
 `;
 
-export default function() {
+export default function(props) {
   return (
     <MoreFilters>
       <Content>
         <Filter hideLg>
-          <RoomType />
+          <RoomType
+            onToggle={props.onToggleRoomTypes}
+            roomtype={props.roomtype}
+          />
         </Filter>
         <Filter hideLg>
-          <Price />
+          <Price onUpdatePrice={props.onUpdatePrice} price={props.price} />
         </Filter>
         <Filter>
-          <RoomsAndBeds />
+          <RoomsAndBeds
+            rooms={props.rooms}
+            roomsMin={props.roomsMin}
+            roomsMax={props.roomsMax}
+            handlePlusCount={props.handlePlusCount}
+            handleMinusCount={props.handleMinusCount}
+          />
         </Filter>
         <Filter>
-          <MoreOptions />
+          <MoreOptions
+            instantBook={props.instantBook}
+            onToggleInstantBook={props.onToggleInstantBook}
+            superhost={props.superhost}
+            onToggleSuperhost={props.onToggleSuperhost}
+          />
         </Filter>
         <Filter>
-          <Amenities />
+          <Amenities
+            amenities={props.amenities}
+            onToggleAmenities={props.onToggleAmenities}
+          />
         </Filter>
         <Filter>
-          <Facilities />
+          <Facilities
+            facilities={props.facilities}
+            onToggleFacilities={props.onToggleFacilities}
+          />
         </Filter>
       </Content>
     </MoreFilters>

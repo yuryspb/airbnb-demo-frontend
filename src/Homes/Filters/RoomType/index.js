@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Chkbox from "../../../UI/Checkbox";
 import entire from "./entireHome.svg";
 import privat from "./privateRoom.svg";
 import shared from "./sharedRoom.svg";
@@ -42,22 +43,21 @@ const Icon = styled.img`
   align-self: flex-end;
 `;
 
-const Checkbox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Checkbox = styled(Chkbox)`
   margin-right: 12px;
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(72, 72, 72, 0.3);
-  border-radius: 4px;
+  flex-shrink: 0;
+  align-self: flex-start;
 `;
 
-export default function() {
+export default function(props) {
   return (
     <RoomType>
       <Row>
-        <Checkbox />
+        <Checkbox
+          isChecked={props.roomtype.entire}
+          onToggle={props.onToggle}
+          name="entire"
+        />
         <TextWrapper>
           <Name>Entire home</Name>
           <Annotation>Have a place to yourself</Annotation>
@@ -65,7 +65,11 @@ export default function() {
         <Icon src={entire} />
       </Row>
       <Row>
-        <Checkbox />
+        <Checkbox
+          isChecked={props.roomtype.private}
+          onToggle={props.onToggle}
+          name="private"
+        />
         <TextWrapper>
           <Name>Private room</Name>
           <Annotation>
@@ -75,7 +79,11 @@ export default function() {
         <Icon src={privat} />
       </Row>
       <Row>
-        <Checkbox />
+        <Checkbox
+          isChecked={props.roomtype.shared}
+          onToggle={props.onToggle}
+          name="shared"
+        />
         <TextWrapper>
           <Name>Shared room</Name>
           <Annotation>Stay in a shared space, like a common room</Annotation>

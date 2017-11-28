@@ -43,6 +43,7 @@ const Button = styled.button`
   background-color: #fff;
   color: #008489;
   opacity: ${props => (props.isDisabled ? 0.5 : 1)};
+  cursor: pointer;
 `;
 
 const Row = styled.div`
@@ -62,37 +63,64 @@ const Num = styled.span`
 
 const Icon = styled.img``;
 
-export default function() {
+export default function(props) {
+  const plusCount = e => props.handlePlusCount(e.target.name);
+  const minusCount = e => props.handleMinusCount(e.target.name);
+
   return (
     <RoomsAndBeds>
       <Title>Rooms and beds</Title>
       <Row>
         <Name>Bedrooms</Name>
-        <Button isDisabled>
+        <Button
+          isDisabled={props.rooms.bedrooms <= props.roomsMin}
+          onClick={minusCount}
+          name="bedrooms"
+        >
           <Icon src={minus} />
         </Button>
-        <Num>0+</Num>
-        <Button>
+        <Num>{props.rooms.bedrooms}+</Num>
+        <Button
+          isDisabled={props.rooms.bedrooms >= props.roomsMax}
+          onClick={plusCount}
+          name="bedrooms"
+        >
           <Icon src={plus} />
         </Button>
       </Row>
       <Row>
         <Name>Beds</Name>
-        <Button isDisabled>
+        <Button
+          isDisabled={props.rooms.beds <= props.roomsMin}
+          onClick={minusCount}
+          name="beds"
+        >
           <Icon src={minus} />
         </Button>
-        <Num>0+</Num>
-        <Button>
+        <Num>{props.rooms.beds}+</Num>
+        <Button
+          isDisabled={props.rooms.beds >= props.roomsMax}
+          onClick={plusCount}
+          name="beds"
+        >
           <Icon src={plus} />
         </Button>
       </Row>
       <Row>
         <Name>Bathrooms</Name>
-        <Button isDisabled>
+        <Button
+          isDisabled={props.rooms.bathrooms <= props.roomsMin}
+          onClick={minusCount}
+          name="bathrooms"
+        >
           <Icon src={minus} />
         </Button>
-        <Num>0+</Num>
-        <Button>
+        <Num>{props.rooms.bathrooms}+</Num>
+        <Button
+          isDisabled={props.rooms.bathrooms >= props.roomsMax}
+          onClick={plusCount}
+          name="bathrooms"
+        >
           <Icon src={plus} />
         </Button>
       </Row>

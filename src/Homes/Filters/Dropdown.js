@@ -37,6 +37,7 @@ export const Button = styled.button`
   font-size: 14px;
   cursor: pointer;
   color: #383838;
+  cursor: pointer;
 
   display: ${props => (props.showLg ? "none" : "block")};
   background-color: ${props => (props.isOpen ? "#008489" : "#fff")};
@@ -47,7 +48,9 @@ export const Button = styled.button`
   }
 `;
 
-export const Close = styled.a``;
+export const Close = styled.a`
+  cursor: pointer;
+`;
 
 export const Title = styled.span`
   margin: 0;
@@ -59,10 +62,12 @@ export const Clear = styled.span`
   font-family: "Circular Air Book", sans-serif;
   font-size: 14px;
   color: #0f7276;
+  cursor: pointer;
 `;
 
 export const ConfirmButton = styled.button`
   display: none;
+  cursor: pointer;
 
   @media (min-width: 576px) {
     display: block;
@@ -84,6 +89,7 @@ export const MobileButton = styled.button`
   color: #fff;
   font-family: "Circular Air", sans-serif;
   font-size: 18px;
+  cursor: pointer;
 
   @media (min-width: 576px) {
     display: none;
@@ -137,14 +143,30 @@ export const DropDownWrapper = styled.div`
   }
 `;
 
-export const Image = styled.img``;
+export const Overflow = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+`;
+
+export const Image = styled.img`
+  cursor: pointer;
+`;
 
 export default function(props) {
+  const onApply = () => props.handlerApply(props.id);
+  const onCancel = () => props.handlerCancel(props.id);
+
   return (
     <div>
       <Button
+        id={props.id}
         onClick={props.toggleOpen}
         isOpen={props.isOpen}
+        isActive={props.isActive}
         showLg={props.showLg}
         name={props.name}
       >
@@ -154,6 +176,7 @@ export default function(props) {
       </Button>
       {props.isOpen && (
         <div>
+          <Overflow />
           <DropDownWrapper>
             <Header>
               <Close onClick={props.toggleOpen}>
@@ -166,8 +189,8 @@ export default function(props) {
             {props.children}
 
             <Footer>
-              <ConfirmButton onClick={props.toggleOpen}>Cancel</ConfirmButton>
-              <ConfirmButton onClick={props.toggleOpen} isPrimary>
+              <ConfirmButton onClick={onCancel}>Cancel</ConfirmButton>
+              <ConfirmButton onClick={onApply} isPrimary>
                 Apply
               </ConfirmButton>
               {props.mobileTitle && (

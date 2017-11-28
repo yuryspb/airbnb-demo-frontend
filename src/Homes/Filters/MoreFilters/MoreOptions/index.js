@@ -67,7 +67,7 @@ const Link = styled.a`
 
 const TextWrapper = styled.div``;
 
-export default function() {
+export default function(props) {
   return (
     <MoreOptions>
       <Title>More options</Title>
@@ -77,7 +77,10 @@ export default function() {
           <Annotation>Secure a reservation instantly.</Annotation>
           <Link>Learn more</Link>
         </TextWrapper>
-        <RadioButton />
+        <RadioButton
+          isChecked={props.instantBook}
+          onToggle={props.onToggleInstantBook}
+        />
       </Row>
       <Row>
         <TextWrapper>
@@ -85,7 +88,10 @@ export default function() {
           <Annotation>Stay with recognized hosts.</Annotation>
           <Link>Learn more</Link>
         </TextWrapper>
-        <RadioButton />
+        <RadioButton
+          isChecked={props.superhost}
+          onToggle={props.onToggleSuperhost}
+        />
       </Row>
     </MoreOptions>
   );

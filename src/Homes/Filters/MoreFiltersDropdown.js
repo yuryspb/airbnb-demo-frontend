@@ -7,7 +7,8 @@ import {
   MobileButton,
   Close,
   Clear,
-  Image
+  Image,
+  Overflow
 } from "./Dropdown";
 import closeIcon from "./close.svg";
 
@@ -36,12 +37,13 @@ const DropDownWrapper = styled.div`
 
 const ConfirmButton = styled.button`
   display: none;
+  cursor: pointer;
 
   @media (min-width: 576px) {
     display: block;
     padding: 12px 28px;
     background-color: #008489;
-    font-family: "Circular", sans-serif;
+    font-family: "Circular Air Book", sans-serif;
     font-size: 18px;
     color: #fff;
     border: none;
@@ -51,11 +53,11 @@ const ConfirmButton = styled.button`
 
 const CancelButton = styled.button`
   display: none;
+  cursor: pointer;
 
   @media (min-width: 576px) {
     display: block;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 12px 28px;
     font-family: "Circular Air Book", sans-serif;
     font-size: 18px;
     color: #383838;
@@ -81,11 +83,16 @@ const Footer = styled.div`
 `;
 
 export default function(props) {
+  const onApply = () => props.handlerApply(props.id);
+  const onCancel = () => props.handlerCancel(props.id);
+
   return (
     <div>
       <Button
+        id={props.id}
         onClick={props.toggleOpen}
         isOpen={props.isOpen}
+        isActive={props.isActive}
         showLg={props.showLg}
         name={props.name}
       >
@@ -93,6 +100,7 @@ export default function(props) {
       </Button>
       {props.isOpen && (
         <div>
+          <Overflow />
           <DropDownWrapper>
             <Header>
               <Close onClick={props.toggleOpen}>
@@ -103,8 +111,8 @@ export default function(props) {
             </Header>
             {props.children}
             <Footer>
-              <CancelButton onClick={props.toggleOpen}>Cancel</CancelButton>
-              <ConfirmButton onClick={props.toggleOpen} isPrimary>
+              <CancelButton onClick={onCancel}>Cancel</CancelButton>
+              <ConfirmButton onClick={onApply} isPrimary>
                 See homes
               </ConfirmButton>
               <MobileButton>See homes</MobileButton>

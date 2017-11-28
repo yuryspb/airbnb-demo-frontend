@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import Chkbox from "../../../../UI/Checkbox";
 import down from "../../arrowDown.svg";
 
 const Amenities = styled.div`
@@ -44,15 +45,8 @@ const CheckboxWrapper = styled.div`
   padding-bottom: 8px;
 `;
 
-const Checkbox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Checkbox = styled(Chkbox)`
   margin-right: 12px;
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(72, 72, 72, 0.3);
-  border-radius: 4px;
 `;
 
 const ExpandBtn = styled.button`
@@ -62,6 +56,7 @@ const ExpandBtn = styled.button`
   background-color: #fff;
   border: none;
   color: #0f7276;
+  cursor: pointer;
 
   @media (min-width: 576px) {
     font-size: 16px;
@@ -72,22 +67,42 @@ const Icon = styled.img`
   margin-left: 6px;
 `;
 
-export default function() {
+export default function(props) {
   return (
     <Amenities>
       <Title>Amenities</Title>
       <Content>
         <CheckboxWrapper>
-          <Checkbox /> Heating
+          <Checkbox
+            isChecked={props.amenities.heating}
+            name="heating"
+            onToggle={props.onToggleAmenities}
+          />
+          Heating
         </CheckboxWrapper>
         <CheckboxWrapper>
-          <Checkbox /> Kitchen
+          <Checkbox
+            isChecked={props.amenities.kitchen}
+            name="kitchen"
+            onToggle={props.onToggleAmenities}
+          />
+          Kitchen
         </CheckboxWrapper>
         <CheckboxWrapper>
-          <Checkbox /> TV
+          <Checkbox
+            isChecked={props.amenities.tv}
+            name="tv"
+            onToggle={props.onToggleAmenities}
+          />
+          TV
         </CheckboxWrapper>
         <CheckboxWrapper>
-          <Checkbox /> Wireless Internet
+          <Checkbox
+            isChecked={props.amenities.wireless}
+            name="wireless"
+            onToggle={props.onToggleAmenities}
+          />
+          Wireless Internet
         </CheckboxWrapper>
       </Content>
       <ExpandBtn>

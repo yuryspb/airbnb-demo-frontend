@@ -5,7 +5,7 @@ import Card from "./Card";
 import Paginator from "./Paginator";
 import Maps from "./Maps";
 
-import { Filter, Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
+import { Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
 import Filters from "./Filters";
 
 import btn from "./btnMap.png";

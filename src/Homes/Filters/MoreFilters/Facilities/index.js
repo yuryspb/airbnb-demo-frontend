@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import Chkbox from "../../../../UI/Checkbox";
 import down from "../../arrowDown.svg";
 
 const Facilities = styled.div`
@@ -44,15 +45,8 @@ const CheckboxWrapper = styled.div`
   padding-bottom: 8px;
 `;
 
-const Checkbox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Checkbox = styled(Chkbox)`
   margin-right: 12px;
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(72, 72, 72, 0.3);
-  border-radius: 4px;
 `;
 
 const ExpandBtn = styled.button`
@@ -62,6 +56,7 @@ const ExpandBtn = styled.button`
   background-color: #fff;
   border: none;
   color: #0f7276;
+  cursor: pointer;
 
   @media (min-width: 576px) {
     font-size: 16px;
@@ -72,22 +67,42 @@ const Icon = styled.img`
   margin-left: 6px;
 `;
 
-export default function() {
+export default function(props) {
   return (
     <Facilities>
       <Title>Facilities</Title>
       <Content>
         <CheckboxWrapper>
-          <Checkbox /> Elebator
+          <Checkbox
+            isChecked={props.facilities.elebator}
+            name="elebator"
+            onToggle={props.onToggleFacilities}
+          />
+          Elebator
         </CheckboxWrapper>
         <CheckboxWrapper>
-          <Checkbox /> Free parking on premises
+          <Checkbox
+            isChecked={props.facilities.freeParking}
+            name="freeParking"
+            onToggle={props.onToggleFacilities}
+          />
+          Free parking on premises
         </CheckboxWrapper>
         <CheckboxWrapper>
-          <Checkbox /> Pool
+          <Checkbox
+            isChecked={props.facilities.pool}
+            name="pool"
+            onToggle={props.onToggleFacilities}
+          />
+          Pool
         </CheckboxWrapper>
         <CheckboxWrapper>
-          <Checkbox /> Wheelchair accessible
+          <Checkbox
+            isChecked={props.facilities.wheelchair}
+            name="wheelchair"
+            onToggle={props.onToggleFacilities}
+          />
+          Wheelchair accessible
         </CheckboxWrapper>
       </Content>
       <ExpandBtn>

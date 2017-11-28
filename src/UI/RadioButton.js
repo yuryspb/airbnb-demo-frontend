@@ -3,7 +3,7 @@ import styled from "styled-components";
 import checkOn from "./checkRb.svg";
 import checkOff from "./unCheckRb.svg";
 
-const Wrapper = styled.button`
+const RadioButton = styled.button`
   position: relative;
   min-width: 64px;
   width: 64px;
@@ -14,6 +14,7 @@ const Wrapper = styled.button`
     ${props =>
       props.isChecked ? "rgba(0, 132, 137, 0.3)" : "rgba(72, 72, 72, 0.3)"};
   border-radius: 24px;
+  cursor: pointer;
 `;
 
 const Circle = styled.div`
@@ -33,24 +34,12 @@ const Circle = styled.div`
 
 const Icon = styled.img``;
 
-export default class RadioButton extends React.Component {
-  state = { checked: false };
-
-  check = () => {
-    this.setState({ checked: !this.state.checked });
-  };
-
-  render() {
-    return (
-      <Wrapper onClick={this.check} isChecked={this.state.checked}>
-        <Circle isChecked={this.state.checked}>
-          {this.state.checked ? (
-            <Icon src={checkOn} />
-          ) : (
-            <Icon src={checkOff} />
-          )}
-        </Circle>
-      </Wrapper>
-    );
-  }
+export default function(props) {
+  return (
+    <RadioButton onClick={props.onToggle} isChecked={props.isChecked}>
+      <Circle isChecked={props.isChecked}>
+        {props.isChecked ? <Icon src={checkOn} /> : <Icon src={checkOff} />}
+      </Circle>
+    </RadioButton>
+  );
 }

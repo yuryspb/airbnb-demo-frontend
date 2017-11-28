@@ -44,15 +44,22 @@ const Bargraph = styled.div`
   padding-right: 16px;
 `;
 
-export default function() {
+export default function(props) {
   return (
     <Price>
       <Title>Price range</Title>
-      <Name>$10 — $1000+</Name>
+      <Name>
+        ${props.price.startPrice} — ${props.price.endPrice}+
+      </Name>
       <Annotation>The average nightly price is $75.</Annotation>
       <Bargraph>
         <Diagram />
-        <Rheostat min={10} max={1000} values={[1, 1000]} />
+        <Rheostat
+          min={props.price.min}
+          max={props.price.max}
+          values={[props.price.startPrice, props.price.endPrice]}
+          onValuesUpdated={props.onUpdatePrice}
+        />
       </Bargraph>
     </Price>
   );
