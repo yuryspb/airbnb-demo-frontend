@@ -31,6 +31,32 @@
   font-size: 14px;
   box-shadow: none;
 }
+
 .DayPickerNavigation_container {
   display: none;
+}
+
+@media (min-width: 576px) {
+  .DayPickerNavigation_container {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .DayPicker_weekHeader {
+    top: 130px;
+    position: fixed;
+    z-index: 15;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .CalendarMonth_caption {
+    padding-bottom: 8px;
+    padding-top: 16px;
+  }
+
+  .CalendarMonth {
+    padding: 0;
+  }
 }
