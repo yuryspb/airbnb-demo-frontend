@@ -131,6 +131,7 @@ const ReadMore = styled.button`
   background: none;
   padding: 0;
   display: inline-block;
+  cursor: pointer;
 `;
 
 const ContactButton = styled.button`

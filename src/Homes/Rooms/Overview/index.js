@@ -99,6 +99,7 @@ const ReadMore = styled.button`
   font-family: "Circular Air Light", sans-serif;
   font-size: 16px;
   color: #0f7276;
+  cursor: pointer;
 `;
 
 const PlaceRoom = styled.span`
@@ -396,7 +397,8 @@ export default () => {
           Cancel within 48 hours of booking
           <MediaQuery maxWidth="767px">
             <br />
-          </MediaQuery>to get a full refund.
+          </MediaQuery>{" "}
+          to get a full refund.
         </Text>
         <Hr />
         <SmallHeader>Flexible</SmallHeader>

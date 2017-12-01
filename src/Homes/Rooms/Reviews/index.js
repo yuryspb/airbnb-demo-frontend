@@ -89,6 +89,7 @@ const ReadMore = styled.button`
   border: none;
   background: none;
   padding: 0;
+  cursor: pointer;
 
   @media (min-width: 992px) {
     display: inline-block;

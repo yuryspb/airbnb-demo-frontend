@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../../Header";
 import Card from "../Card";
 import Paginator from "./Paginator";
-import Maps from "../Maps";
+import ReactMap from "../Maps";
 
 import { Wrapper, WrapperMap, Footer, BtnMap } from "../styled";
 import Filters from "../Filters";
@@ -111,7 +111,7 @@ export default function() {
           </div>
           <div className="col-lg-4">
             <WrapperMap>
-              <Maps center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
+              <ReactMap center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
             </WrapperMap>
           </div>
           <BtnMap href="#">

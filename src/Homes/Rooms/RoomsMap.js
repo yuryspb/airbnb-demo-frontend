@@ -28,10 +28,32 @@ const Note = styled.p`
   color: #383838;
 `;
 
+const Marker = styled.div`
+  position: relative;
+  z-index: 500;
+  width: 32px;
+  height: 32px;
+  background: rgba(3, 178, 185, 0.2);
+  border: 0.8px solid #008489;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: 768px) {
+    width: 77px;
+    height: 77px;
+  }
+  @media (min-width: 992px) {
+    width: 98px;
+    height: 98px;
+  }
+`;
+
 export default props => (
   <Section>
     <MapContainer>
-      <ReactMap center={{ lat: 4.49, lng: -75.7 }} zoom={13} />
+      <ReactMap center={{ lat: 4.49, lng: -75.7 }} zoom={14}>
+        <Marker lat={4.49} lng={-75.7} />
+      </ReactMap>
     </MapContainer>
     <Note>
       Exact location information is provided after a booking is confirmed.

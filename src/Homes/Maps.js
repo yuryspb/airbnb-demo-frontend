@@ -1,15 +1,15 @@
 import React from "react";
-import GoogleMap from "google-map-react";
+import ReactMap from "google-map-react";
 
-export default props => {
-  return (
-    <GoogleMap
-      defaultCenter={props.center}
-      defaultZoom={props.zoom}
-      bootstrapURLKeys={{
-        key: process.env.REACT_APP_SECRET_CODE,
-        language: "en"
-      }}
-    />
-  );
-};
+export default props => (
+  <ReactMap
+    bootstrapURLKeys={{
+      key: process.env.REACT_APP_SECRET_CODE,
+      language: "en"
+    }}
+    center={props.center}
+    zoom={props.zoom}
+  >
+    {props.children}
+  </ReactMap>
+);
