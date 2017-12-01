@@ -1,20 +1,20 @@
 import React from "react";
 
-import Header from "../Header";
-import Card from "./Card";
+import Header from "../../Header";
+import Card from "../Card";
 import Paginator from "./Paginator";
-import Maps from "./Maps";
+import ReactMap from "../Maps";
 
-import { Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
-import Filters from "./Filters";
+import { Wrapper, WrapperMap, Footer, BtnMap } from "../styled";
+import Filters from "../Filters";
 
 import btn from "./btnMap.png";
-import img1 from "./home1.png";
-import img2 from "./home2.png";
-import img3 from "./home3.png";
-import img4 from "./home4.png";
-import img5 from "./home5.png";
-import img6 from "./home6.png";
+import img1 from "../home1.png";
+import img2 from "../home2.png";
+import img3 from "../home3.png";
+import img4 from "../home4.png";
+import img5 from "../home5.png";
+import img6 from "../home6.png";
 
 export default function() {
   return (
@@ -30,6 +30,7 @@ export default function() {
               <Wrapper>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/1"
                     title="La Salentina, see, nature & relax"
                     img={img1}
                     alt="La Salentina, see, nature & relax"
@@ -41,6 +42,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/2"
                     title="Your private 3 bedr. riad and exclusi..."
                     img={img2}
                     alt="Your private 3 bedr. riad and exclusi..."
@@ -52,6 +54,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/3"
                     title="Dreamy Tropical Tree House"
                     img={img3}
                     alt="Dreamy Tropical Tree House"
@@ -64,6 +67,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/4"
                     title="Best location old town luxury loft"
                     img={img4}
                     alt="Best location old town luxury loft"
@@ -75,6 +79,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/5"
                     title="Lussuoso. Vista incantevole."
                     img={img5}
                     alt="Lussuoso. Vista incantevole."
@@ -86,6 +91,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/6"
                     title="In the historical center of Lecce"
                     img={img6}
                     alt="In the historical center of Lecce"
@@ -105,7 +111,7 @@ export default function() {
           </div>
           <div className="col-lg-4">
             <WrapperMap>
-              <Maps center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
+              <ReactMap center={{ lat: 39.92, lng: 18.35 }} zoom={9} />
             </WrapperMap>
           </div>
           <BtnMap href="#">

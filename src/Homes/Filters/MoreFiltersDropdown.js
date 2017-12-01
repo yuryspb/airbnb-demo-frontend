@@ -28,8 +28,8 @@ const DropDownWrapper = styled.div`
   @media (min-width: 991px) {
     display: inline-block;
     top: 136px;
-    right: auto;
-    width: 60%;
+    left: 10%;
+    right: 35%;
     background-color: #fff;
     padding-left: 80px;
   }

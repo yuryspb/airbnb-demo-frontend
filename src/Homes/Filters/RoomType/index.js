@@ -58,7 +58,7 @@ export default function(props) {
           onToggle={props.onToggle}
           name="entire"
         />
-        <TextWrapper>
+        <TextWrapper onToggle={props.onToggle}>
           <Name>Entire home</Name>
           <Annotation>Have a place to yourself</Annotation>
         </TextWrapper>

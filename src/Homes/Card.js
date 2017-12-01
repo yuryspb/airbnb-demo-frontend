@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import stars from "../UI/stars.svg";
 import { Img, CardTitle, Description, Reviews, Review } from "../UI";
 
-const Card = styled.div`
+export const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-decoration: none;
+  color: #383838;
 `;
 
 export const Stars = styled.img`
@@ -18,7 +21,7 @@ export const Stars = styled.img`
 
 export default function(props) {
   return (
-    <Card>
+    <Card to={props.href}>
       <Img src={props.img} alt={props.alt} width="100%" />
       <CardTitle>
         ${props.price} {props.title}
