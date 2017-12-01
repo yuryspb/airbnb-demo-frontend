@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Circular";
+  src: url("./fonts/Circular_Air-Bold.ttf") format("ttf"),
+    url("./fonts/Circular_Air-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Circular Air Book";
+  src: url("./fonts/Circular_Air-Book.ttf") format("ttf"),
+    url("./fonts/Circular_Air-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Circular Air Light";
+  src: url("./fonts/Circular_Air-Light.ttf") format("ttf"),
+    url("./fonts/Circular_Air-Light.woff") format("woff");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -126,22 +144,4 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Circular";
-  src: url("./fonts/Circular_Air-Bold.ttf") format("ttf"),
-    url("./fonts/Circular_Air-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Circular Air Book";
-  src: url("./fonts/Circular_Air-Book.ttf") format("ttf"),
-    url("./fonts/Circular_Air-Book.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Circular Air Light";
-  src: url("./fonts/Circular_Air-Light.ttf") format("ttf"),
-    url("./fonts/Circular_Air-Light.woff") format("woff");
 }

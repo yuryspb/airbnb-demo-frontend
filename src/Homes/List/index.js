@@ -1,20 +1,20 @@
 import React from "react";
 
-import Header from "../Header";
-import Card from "./Card";
+import Header from "../../Header";
+import Card from "../Card";
 import Paginator from "./Paginator";
-import Maps from "./Maps";
+import Maps from "../Maps";
 
-import { Wrapper, WrapperMap, Footer, BtnMap } from "./styled";
-import Filters from "./Filters";
+import { Wrapper, WrapperMap, Footer, BtnMap } from "../styled";
+import Filters from "../Filters";
 
 import btn from "./btnMap.png";
-import img1 from "./home1.png";
-import img2 from "./home2.png";
-import img3 from "./home3.png";
-import img4 from "./home4.png";
-import img5 from "./home5.png";
-import img6 from "./home6.png";
+import img1 from "../home1.png";
+import img2 from "../home2.png";
+import img3 from "../home3.png";
+import img4 from "../home4.png";
+import img5 from "../home5.png";
+import img6 from "../home6.png";
 
 export default function() {
   return (
