@@ -30,6 +30,7 @@ export default function() {
               <Wrapper>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/1"
                     title="La Salentina, see, nature & relax"
                     img={img1}
                     alt="La Salentina, see, nature & relax"
@@ -41,6 +42,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/2"
                     title="Your private 3 bedr. riad and exclusi..."
                     img={img2}
                     alt="Your private 3 bedr. riad and exclusi..."
@@ -52,6 +54,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/3"
                     title="Dreamy Tropical Tree House"
                     img={img3}
                     alt="Dreamy Tropical Tree House"
@@ -64,6 +67,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/4"
                     title="Best location old town luxury loft"
                     img={img4}
                     alt="Best location old town luxury loft"
@@ -75,6 +79,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/5"
                     title="Lussuoso. Vista incantevole."
                     img={img5}
                     alt="Lussuoso. Vista incantevole."
@@ -86,6 +91,7 @@ export default function() {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-6">
                   <Card
+                    href="/homes/6"
                     title="In the historical center of Lecce"
                     img={img6}
                     alt="In the historical center of Lecce"
